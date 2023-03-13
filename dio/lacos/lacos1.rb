@@ -1,4 +1,4 @@
-# while
+# while - executa as instruções ou código até que a condição dada seja avaliada como falsa
 valor = 5
 while valor > 0
     puts "Valor é: %05d" % valor
@@ -75,12 +75,21 @@ end
 
 puts "#" * 30
 
-# until
+# until - executa as instruções ou código até que a condição dada seja avaliada como verdadeira
+# é exatamente o oposto do loop while que é executado até que a condição dada seja avaliada como falsa
 valor = 0
 until valor == 10
    puts valor
    valor += 1
 end 
+
+puts "#" * 30
+
+novo_valor = 0
+until novo_valor == 10
+    puts novo_valor * 2
+    novo_valor += 1
+end
 
 # COMANDOS EM LAÇOS
 # break - sai do laço
