@@ -8,15 +8,15 @@ class Account
     end
 
     def deposit(amount)
-        balance =+ amount
+        @balance =+ amount
     end
 
     def withdraw(amount)
         raise "Insufficient account balance" if balance < amount
-        balance -= amount
+        @balance -= amount
     end
 
     def account_data
-        puts "Account number: #{number}, Holder: #{holder}, Balance: %.2f" % balance
+        "Account number: #{number}, Holder: #{holder}, Balance: %.2f" % balance
     end
 end
