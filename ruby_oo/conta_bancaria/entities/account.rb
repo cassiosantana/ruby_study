@@ -17,6 +17,6 @@ class Account
     end
 
     def account_data
-        puts "Account number: #{number}, Holder: #{holder}, Balance: #{balance}"
+        puts "Account number: #{number}, Holder: #{holder}, Balance: %.2f" % balance
     end
 end
