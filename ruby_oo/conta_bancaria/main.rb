@@ -8,10 +8,10 @@ class Main
         number = gets.chomp.to_i
         print "Account holder: "
         holder = gets.chomp
-        print "Do you want to make an initial deposit? ( y | n ) "
+        print "Do you want to make an initial deposit ( y | n )? "
         response = gets.chomp
 
-        if response[0] == 'y' || 'Y'
+        if response[0] == 'y' || response[0] == 'Y'
             print "What amount to deposit? "
             amount = gets.chomp.to_i
             acc1 = Account.new(number, holder, amount)
