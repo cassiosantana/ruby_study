@@ -1,4 +1,6 @@
 require "./entities/account"
+require "./entities/savings_account"
+require "./entities/current_account"
 
 class Main 
     def initialize
@@ -15,9 +17,9 @@ class Main
         if response[0] == 'y' || response[0] == 'Y'
             print "What amount to deposit? "
             amount = gets.chomp.to_i
-            acc1 = Account.new(number, holder, amount)
+            acc1 = CurrentAccount.new(number, holder, amount)
         else
-            acc1 = Account.new(number, holder)
+            acc1 = CurrentAccount.new(number, holder)
         end
 
         puts "Account data: #{acc1.account_data}"

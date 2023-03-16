@@ -1,4 +1,6 @@
 class Account
+    @@tax = 0.0
+
     attr_reader :number
     attr_accessor :holder, :balance
     def initialize(number, holder, amount=0.0)
@@ -12,8 +14,8 @@ class Account
     end
 
     def withdraw(amount)
-        raise "Insufficient account balance" if balance < amount
-        @balance -= amount
+        raise "Insufficient account balance" if balance + @@tax < amount
+        @balance -= amount + @@tax
     end
 
     def account_data
