@@ -14,7 +14,7 @@ class Account
     end
 
     def withdraw(amount)
-        raise "Insufficient account balance" if balance + @@tax < amount
+        raise "Insufficient account balance" if balance < amount + @@tax
         @balance -= amount + @@tax
     end
 
