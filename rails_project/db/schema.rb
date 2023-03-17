@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema[7.0].define(version: 2023_03_16_111537) do
   create_table "products", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.decimal "price"
     t.boolean "active"
     t.datetime "created_at", null: false
