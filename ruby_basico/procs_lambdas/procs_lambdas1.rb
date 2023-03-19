@@ -63,3 +63,46 @@ end
 
 test_proc(valor, meu_proc)
 
+puts '-' * 30
+
+#closures | quando um método interno consegue enxergar e interagir com variáveis do método externo
+def soma(*args)
+    s = 0
+    args.each do |num|
+        s += num
+    end
+    s
+end
+
+puts "Resultado da soma: #{soma 1, 2, 3}"
+
+# diferença lambda e proc em argumentos
+teste_proc1 = Proc.new {|a, b, c| a + b + c}
+teste_proc2 = proc {|a, b, c| a + b + c}
+teste_lambda = lambda {|a, b, c| a + b + c}
+
+puts '-' * 50
+
+puts "Número correto de argumentos { 3 argumentos }"
+puts "teste_proc1 => #{teste_proc1.call(1, 2, 3)}"
+puts "teste_proc2 => #{teste_proc2.call(1, 2, 3)}"
+puts "teste_lambda => #{teste_lambda.call(1, 2, 3)}"
+
+puts '-' * 50
+
+# # menos argumentos para a proc gera um erro
+# # deduz que o terceiro argumento é nulo e não pode ser convertido para Integer
+# puts "Número inferior de argumentos { 2 argumentos }"
+# puts "teste_proc1 => #{teste_proc1.call(1, 2)}"
+# puts "teste_proc2 => #{teste_proc2.call(1, 2)}"
+# puts "teste_lambda => #{teste_lambda.call(1, 2)}"
+
+puts '-' * 50
+
+# # mais argumentos para o lambda gera um erro
+# # a proc descarta o argumento a mais
+# # o lambda gera um erro de excesso de argumentos
+# puts "Número superior de argumentos { 3 argumentos }"
+# puts "teste_proc1 => #{teste_proc1.call(1, 2, 3, 4)}"
+# puts "teste_proc2 => #{teste_proc2.call(1, 2, 3, 4)}"
+# puts "teste_lambda => #{teste_lambda.call(1, 2, 3, 4)}"
