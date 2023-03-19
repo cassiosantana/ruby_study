@@ -1,3 +1,3 @@
 class CurrentAccount < Account
-    @@tax = 10
+    @@TAX = 10
 end

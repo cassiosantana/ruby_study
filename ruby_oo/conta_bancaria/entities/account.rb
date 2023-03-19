@@ -1,5 +1,5 @@
 class Account
-    @@tax = 0.0
+    @@TAX = 0.0
 
     attr_reader :number
     attr_accessor :holder, :balance
@@ -14,11 +14,11 @@ class Account
     end
 
     def withdraw(amount)
-        raise "Insufficient account balance" if balance < amount + @@tax
-        @balance -= amount + @@tax
+        raise "Insufficient account balance" if @balance < amount + @@TAX
+        @balance -= amount + @@TAX
     end
 
     def account_data
-        "Account number: #{number}, Holder: #{holder}, Balance: %.2f" % balance
+        "Account number: #{number}, Holder: #{holder}, Balance: %.2f" % @balance
     end
 end
