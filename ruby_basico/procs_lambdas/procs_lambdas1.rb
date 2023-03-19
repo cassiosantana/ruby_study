@@ -17,6 +17,7 @@ t6 = -> x {x * 10}
 puts t6.call(7)
 puts t6.class
 
+puts '-' * 30
 
 def rep_a(n)
 	n.times {yield} if block_given?
@@ -30,4 +31,35 @@ def rep_b(n, &block)
 end
 
 rep_b(2) { puts "Teste 2"}
+
+puts '-' * 30
+
+imprimir_nome = lambda {puts "Cassio"}
+def rep_c(n, block)
+    n.times{block.call} if block
+    p block.class
+end
+
+rep_c(2, imprimir_nome)
+
+puts '-' * 30
+
+def rep_c(n, block)
+    n.times{block.call} if block
+    p block.class
+end
+
+rep_c(2, proc {puts "Roger"})
+
+puts '-' * 30
+
+valor = 100.0
+meu_proc = proc {|x| x * 3}
+
+def test_proc(number, block)
+    puts block.call(number)
+    puts block.class
+end
+
+test_proc(valor, meu_proc)
 
