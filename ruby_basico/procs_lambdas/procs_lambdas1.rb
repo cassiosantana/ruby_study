@@ -88,16 +88,12 @@ puts "teste_proc1 => #{teste_proc1.call(1, 2, 3)}"
 puts "teste_proc2 => #{teste_proc2.call(1, 2, 3)}"
 puts "teste_lambda => #{teste_lambda.call(1, 2, 3)}"
 
-puts '-' * 50
-
 # # menos argumentos para a proc gera um erro
 # # deduz que o terceiro argumento é nulo e não pode ser convertido para Integer
 # puts "Número inferior de argumentos { 2 argumentos }"
 # puts "teste_proc1 => #{teste_proc1.call(1, 2)}"
 # puts "teste_proc2 => #{teste_proc2.call(1, 2)}"
 # puts "teste_lambda => #{teste_lambda.call(1, 2)}"
-
-puts '-' * 50
 
 # # mais argumentos para o lambda gera um erro
 # # a proc descarta o argumento a mais
@@ -106,3 +102,23 @@ puts '-' * 50
 # puts "teste_proc1 => #{teste_proc1.call(1, 2, 3, 4)}"
 # puts "teste_proc2 => #{teste_proc2.call(1, 2, 3, 4)}"
 # puts "teste_lambda => #{teste_lambda.call(1, 2, 3, 4)}"
+
+puts '-' * 50
+
+# processamento do método não é cortado pelo return do lambda
+def metodo1
+	_lambda = lambda {return "Resposta de um lambda"}
+	_lambda.call
+	return "Resposta do método"
+end	
+
+puts metodo1
+	
+# processamento do método é cordato pelo return da proc como um break 
+# def metodo2
+# 	_proc = proc {return "Resposta de uma proc"}
+# 	_proc.call
+# 	return "Resposta do método"
+# end
+
+# puts metodo2
