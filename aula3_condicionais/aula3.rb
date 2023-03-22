@@ -1,6 +1,6 @@
 require 'byebug'
 
-debugger
+# debugger
 
 # if
 a = 1
@@ -24,7 +24,9 @@ else
     puts 'o a não é igual a 2 nem a 3'
 end
 
-# case
+puts "o a vale #{a}" if a == 1
+
+# case | mais performático pois ele não testa cada condição, vai direto a condição correta
 case a
     when 2
         puts 'a == 2'
@@ -33,3 +35,10 @@ case a
     else
         puts 'o a não é igual a 2 nem a 3'
 end
+
+# unless | o inverso do if
+unless a == 2
+    puts 'o a é diferente de 1'
+end
+
+puts 'o a é diferente de 1' unless a == 2
