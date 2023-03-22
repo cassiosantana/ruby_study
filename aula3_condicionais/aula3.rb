@@ -42,3 +42,7 @@ unless a == 2
 end
 
 puts 'o a é diferente de 1' unless a == 2
+
+# ternário
+b = a == 1 ? 'é igual a 1' : 'não é igual a 1'
+puts b
