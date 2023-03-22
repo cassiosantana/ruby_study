@@ -23,3 +23,13 @@ elsif a == 3
 else
     puts 'o a não é igual a 2 nem a 3'
 end
+
+# case
+case a
+    when 2
+        puts 'a == 2'
+    when 3
+        puts 'a == 3'
+    else
+        puts 'o a não é igual a 2 nem a 3'
+end
