@@ -26,3 +26,41 @@ puts (1..8).class
 # o ruby é uma linguagem dinâmica mas é fortemente tipado
 # 'a' + 1 não é permitido no ruby justamente por ser fortemente tipado
 puts 'a' + 1.to_s
+
+# tipos de variáveis
+
+# # variável comum
+a = 1
+puts a
+
+# # variavel de instância
+class Classe1
+    # variável de classe precisa ser inicializada com a instância para poder ser enchergada
+    def initialize
+        @a = 2
+    end
+    def print_a
+        puts @a
+    end
+end
+
+Classe1.new.print_a
+
+# variável de classe
+class Classe2
+    # variável de classe não precisa ser inicializada para ser enchergada
+    @@a = 3
+    def imp_a
+        puts @@a
+    end
+end
+
+Classe2.new.imp_a
+
+# variável global
+$a = 4
+puts $a
+
+# constante
+A = 5
+puts A
