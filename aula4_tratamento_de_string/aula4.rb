@@ -38,3 +38,6 @@ puts texto.split(" ")
 texto = "NOSSA aula"
 puts texto.downcase
 puts texto.upcase
+
+# captalize | exeplo de uso é definir uma classe em tempo de execução
+puts texto.capitalize
