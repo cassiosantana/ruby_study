@@ -57,3 +57,6 @@ puts texto.lstrip
 texto = "Nossa aula 4 de hoje"
 puts texto.include?("nossa")
 puts texto.downcase.include?("nossa")
+
+# index
+puts texto.index("aula")
