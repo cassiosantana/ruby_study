@@ -30,3 +30,6 @@ puts texto[8, 10]
 
 # scan | com regex
 puts texto.scan(/aula/)
+
+# split
+puts texto.split(" ")
