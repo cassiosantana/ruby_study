@@ -25,3 +25,6 @@ while a <= b or b > c
     puts 'olá'
     a += 1
 end
+
+# eql?
+puts 24.eql?(12*2)
