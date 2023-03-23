@@ -33,3 +33,8 @@ puts texto.scan(/aula/)
 
 # split
 puts texto.split(" ")
+
+# downcase e upcase
+texto = "NOSSA aula"
+puts texto.downcase
+puts texto.upcase
