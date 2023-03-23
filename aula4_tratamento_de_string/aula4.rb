@@ -27,3 +27,6 @@ puts c << e
 # substring
 texto = 'aula de hoje'
 puts texto[8, 10]
+
+# scan | com regex
+puts texto.scan(/aula/)
