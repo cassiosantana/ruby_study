@@ -52,3 +52,8 @@ puts texto
 puts texto.strip
 puts texto.rstrip
 puts texto.lstrip
+
+# include?
+texto = "Nossa aula 4 de hoje"
+puts texto.include?("nossa")
+puts texto.downcase.include?("nossa")
