@@ -41,3 +41,7 @@ puts texto.upcase
 
 # captalize | exeplo de uso é definir uma classe em tempo de execução
 puts texto.capitalize
+
+# delete
+texto = "Nossa aula 4 de hoje"
+puts texto.delete("sa")
