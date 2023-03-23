@@ -2,7 +2,7 @@
 require 'byebug'
 
 
-# gsub
+# gsub | também é possível remover espaços
 a = 'nossa aula de hoje'
 a = a.gsub('aula', 'aula 4')
 puts a
@@ -45,3 +45,10 @@ puts texto.capitalize
 # delete
 texto = "Nossa aula 4 de hoje"
 puts texto.delete("sa")
+
+# strip | equivalente ao trim do java
+texto = "        #  teste strip  #             "
+puts texto
+puts texto.strip
+puts texto.rstrip
+puts texto.lstrip
