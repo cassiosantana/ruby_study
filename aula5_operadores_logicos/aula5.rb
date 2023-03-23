@@ -28,3 +28,11 @@ end
 
 # eql?
 puts 24.eql?(12*2)
+
+# <=>
+# se o primeiro valor for maior retorna 1
+# se o primeiro valor for igual retorna 0
+# se o primeiro valor for menor retorna -1
+puts 200 <=> 1
+puts 200 <=> 200
+puts 200 <=> 1000
