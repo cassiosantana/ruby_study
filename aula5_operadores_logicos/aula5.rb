@@ -43,3 +43,12 @@ puts 1 > 2
 puts 1 == 2
 puts 1 <= 2
 puts 1 >= 2
+
+# alternativas
+puts '-----------------------'
+puts 1 && 2
+puts 1 and 2
+puts 1 || 2
+puts 1 or 2
+puts !1
+puts not(1)
