@@ -11,3 +11,16 @@ puts a
 b = 'teste 3'
 b.gsub!('3', '2')
 puts b
+
+
+# concatenação
+
+# esta forma só funciona com aspas duplas " "
+c = "Cássio"
+puts d = "Meu nome é #{c}"
+
+e = " Roger"
+puts "Cassio" + e
+
+puts "Cassio" << " Santana"
+puts c << e
