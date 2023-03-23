@@ -60,3 +60,5 @@ puts texto.downcase.include?("nossa")
 
 # index
 puts texto.index("aula")
+
+puts texto.reverse 
