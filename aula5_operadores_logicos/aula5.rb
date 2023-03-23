@@ -35,4 +35,11 @@ puts 24.eql?(12*2)
 # se o primeiro valor for menor retorna -1
 puts 200 <=> 1
 puts 200 <=> 200
-puts 200 <=> 1000
+puts 200 <=> 1000 
+
+# operadores comuns
+puts 1 < 2
+puts 1 > 2
+puts 1 == 2
+puts 1 <= 2
+puts 1 >= 2
