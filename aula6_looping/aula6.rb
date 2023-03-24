@@ -23,3 +23,13 @@ puts "----------------------------------------"
 top = 4
 now = 0
 puts "until #{now += 1} .. #{top}" until now >= top
+
+puts "----------------------------------------"
+
+# loop
+index = 0
+loop do
+    puts index
+    index += 1
+    break if index == 5
+end
