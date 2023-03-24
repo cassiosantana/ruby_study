@@ -16,3 +16,10 @@ top = 4
 now = 0
 # puts "while #{now += 1} .. #{top}" while now < top
 puts "while #{now += 1} .. #{top}" while now < top
+
+puts "----------------------------------------"
+
+# until
+top = 4
+now = 0
+puts "until #{now += 1} .. #{top}" until now >= top
