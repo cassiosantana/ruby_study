@@ -73,3 +73,10 @@ puts "----------------------------------------"
 for i in 0...10
     puts i
 end
+
+# each
+(1..10).each {|i| puts i}
+
+(1..10).each do |i|
+    puts "teste #{i}"
+end
