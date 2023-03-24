@@ -33,3 +33,14 @@ loop do
     index += 1
     break if index == 5
 end
+
+puts "----------------------------------------"
+
+# next
+index = 0
+loop do
+    index += 1
+    next if index == 3 or index == 8
+    puts index
+    break if index == 10
+end
