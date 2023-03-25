@@ -26,3 +26,11 @@ def teste_4 numero
 end
 
 teste_4 5
+
+# definir um valor padrão para um parâmetro par acaso a função não receba um.
+def teste_5 (numero=0)
+    puts numero
+end
+
+teste_5 100
+teste_5
