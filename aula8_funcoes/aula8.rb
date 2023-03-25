@@ -13,3 +13,16 @@ def teste_2
 end
 
 teste_2
+
+# formas de passagem de parâmetros
+def teste_3 (numero)
+    puts numero
+end
+
+teste_3 (4)
+
+def teste_4 numero
+    puts numero
+end
+
+teste_4 5
