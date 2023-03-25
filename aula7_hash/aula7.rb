@@ -25,3 +25,8 @@ a[:telefone] = '66666666'
 puts a[:nome]
 puts a[:telefone]
 
+# atribuir e acessar valores em chaves do tipo string
+a['nome'] = 'Paulo'
+a['telefone'] = 55555555
+puts a['nome']
+puts a['telefone']
