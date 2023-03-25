@@ -64,3 +64,7 @@ loop do
     end
     puts "=" * 50
 end
+
+# EXEMPLO DA IMPORTÂNCIA DO HASH
+# o rails ele utiliza dos requests para pegar os dados http
+# as requisições retornam um dado do tipo hash. chave: valor
