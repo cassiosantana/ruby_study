@@ -34,3 +34,12 @@ end
 
 teste_5 100
 teste_5
+
+# passando multiplos parâmetros
+def teste_6 *multiplos_parametros
+    multiplos_parametros.each do |i|
+        puts i
+    end
+end
+
+teste_6 1, 2, 3, 4, 5
