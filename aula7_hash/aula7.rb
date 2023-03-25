@@ -18,3 +18,10 @@ a = {
     telefone: 988888888
 }
 puts a
+
+# atribuir e acessar valores em chaves do tipo símbolo
+a[:nome] = 'karen'
+a[:telefone] = '66666666'
+puts a[:nome]
+puts a[:telefone]
+
