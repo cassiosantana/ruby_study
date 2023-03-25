@@ -43,3 +43,14 @@ def teste_6 *multiplos_parametros
 end
 
 teste_6 1, 2, 3, 4, 5
+
+# é possível tratar exceptions dentro de funções
+def teste_7
+    puts 'aa' + 1
+
+rescue Exception => e
+    puts "Não é possivel somar"
+    puts e.message
+end
+
+teste_7
