@@ -18,3 +18,7 @@ end
 
 # Instanciação
 meu_carro = Carro.new('Gol')
+
+# mudando valor de atributo
+meu_carro.setar_nome = 'Sandeiro'
+puts meu_carro.pegar_nome
