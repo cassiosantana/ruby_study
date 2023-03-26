@@ -3,4 +3,9 @@ class Carro
     def initialize(nome)
         @nome = nome
     end
+
+    # get
+    def pegar_nome
+        @nome
+    end
 end
