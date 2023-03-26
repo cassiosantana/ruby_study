@@ -15,3 +15,6 @@ class Carro
     end
 
 end
+
+# Instanciação
+meu_carro = Carro.new('Gol')
