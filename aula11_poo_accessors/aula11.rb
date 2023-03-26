@@ -3,11 +3,13 @@
 # gets e sets
 class Carro
     # cria automáticamente os métodos get e set e a variável nome
-    attr_accessor :nome, :cor, :pneu, :porta, :painel
+    attr_accessor :cor, :pneu, :porta, :painel
+    # dá acesso apenas de leitura | método get
+    attr_reader :nome
 end
 
 carro = Carro.new
-carro.nome = 'Gol'
+# carro.nome = 'Gol' | método set não foi definido
 puts carro.nome
 
 
