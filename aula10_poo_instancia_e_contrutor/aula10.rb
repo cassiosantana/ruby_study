@@ -8,4 +8,10 @@ class Carro
     def pegar_nome
         @nome
     end
+
+    # set
+    def setar_nome=(nome)
+        @nome = nome
+    end
+
 end
