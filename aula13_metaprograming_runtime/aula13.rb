@@ -32,3 +32,19 @@ class Carro
         puts "Marca: #{marca} - Modelo: #{self.nome}"
     end
 end
+
+fiesta = Carro.new
+golf = Carro.new
+
+# mudando o comportamento da classe Carro em tempo de execução
+# nem sempre é necessário fazer herança.
+def fiesta.mostrar
+    "Mostrar do fiesta"
+end
+
+def golf.mostrar
+    "Mostrar do golf"
+end
+
+puts fiesta.mostrar
+puts golf.mostrar
