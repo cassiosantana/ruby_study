@@ -1,25 +1,2 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# ror-introducao-mvc
+# Olá, seja bem vindo.
+Este repositório foi criado para registrar as atividades do curso [Ruby on Rails - Introdução a arquitetura MVC](https://web.dio.me/course/ruby-on-rails-introducao-a-arquitetura-mvc/learning/f6ee09aa-54cf-4464-a998-d6190914943e) da dio.
