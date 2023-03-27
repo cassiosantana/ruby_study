@@ -31,6 +31,11 @@ class Carro
     def mostrar(marca = "Marca padrão")
         puts "Marca: #{marca} - Modelo: #{self.nome}"
     end
+
+    # método equivalente aos métodos estáticos de java
+    def self.metodo_de_classe
+        "de classe"
+    end
 end
 
 fiesta = Carro.new
