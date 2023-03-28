@@ -17,4 +17,11 @@ class Carro
     def algo_mais
         "este é um método privado"
     end
+
+    # caso um private tenha sido definido anteriormente e se deseje que um método seja público
+    # é necessário definir explícitamente com public
+    public
+    def algo_mais2
+        "este é um método público"
+    end
 end
