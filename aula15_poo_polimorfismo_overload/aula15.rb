@@ -8,4 +8,4 @@ require_relative 'golf'
 Carro.new.mostrar
 puts "-------------------------"
 Golf.new.mostrar
-Golf.new.andar
+Golf.new.andar 1, 2, 3, "Cassio"

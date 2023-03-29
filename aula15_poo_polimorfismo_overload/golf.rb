@@ -15,4 +15,10 @@ class Golf < Carro
     def andar
         puts "andar sem parâmetros"
     end
+
+    # esta sintaxe do ruby permite criação de métodos flexíveis e dispensando a
+    # necessidade de sobrecarga de métodos(overload)
+    def andar *parametros
+       puts "andar com parâmetros opcionais #{parametros}"
+    end
 end
