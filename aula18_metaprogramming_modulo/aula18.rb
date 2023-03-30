@@ -75,19 +75,37 @@
 ###########################################################################
 
 # usando módulo como namespace
+# module Utilidades
+#   class Cpf
+#     def validar
+#       puts 'validado'
+#     end
+#   end
+
+#   class Cnpj
+#     def validar
+#       puts 'validado'
+#     end
+#   end
+# end
+
+# Utilidades::Cpf.new.validar
+
+###########################################################################
+
+# usando módulos para injetar códigos em instância
 module Utilidades
-  class Cpf
-    def validar
-      puts 'validado'
-    end
+  def validar_cpf
+    puts 'validado!'
   end
 
-  class Cnpj
-    def validar
-      puts 'validado'
-    end
+  def validar_cnpj
+    puts 'validado!'
   end
 end
 
-Utilidades::Cpf.new.validar
+class Cliente
+  include Utilidades
+end
 
+Cliente.new.validar_cpf
