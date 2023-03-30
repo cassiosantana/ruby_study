@@ -131,18 +131,51 @@
 
 # também é possível utilizar módulos em tipos como String
 # assim toda String terá este método
-module Teste
-  def tirar_espacos
-    gsub(' ', '-')
+# module Teste
+#   def tirar_espacos
+#     gsub(' ', '-')
+#   end
+
+#   def imprimir_teste
+#     print 'teste'
+#   end
+# end
+
+# String.include Teste # incluo na instância
+# String.extend Teste # incluo na classe
+
+# # puts 'Cassio Roger de Santana'.tirar_espacos
+# puts String.imprimir_teste
+
+###########################################################################
+module Validacoes
+  def validar_cpf
+    puts 'validado!'
   end
 
-  def imprimir_teste
-    print 'teste'
+  def validar_cnpj
+    puts 'validado!'
   end
 end
 
-String.include Teste # incluo na instância
-String.extend Teste # incluo na classe
+module Utilidades
+  def validar_cpf
+    puts 'validado!'
+  end
 
-# puts 'Cassio Roger de Santana'.tirar_espacos
-puts String.imprimir_teste
+  def validar_cnpj
+    puts 'validado!'
+  end
+end
+
+# neste exemplo abaixo tanto o include quanto extend causam o mesmo efeito
+# devido ao class << self
+class Teste
+  class << self
+    include Validacoes
+  end
+
+  class Teste
+    extend Utilidades
+  end
+end
