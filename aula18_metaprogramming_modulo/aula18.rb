@@ -18,23 +18,45 @@
 # dup = duplica sem as valores das variáveis mas não a metaprogramação
 
 ###########################################################################
-cassio = 'teste'
+# cassio = 'teste'
 
 # forma de definir vários métodos ou atributos em escala de forma mais prática
-class << cassio
-  def olha1
-    'olha 1'
-  end
+# class << cassio
+#   def olha1
+#     'olha 1'
+#   end
 
-  def olha2
-    'olha 2'
-  end
+#   def olha2
+#     'olha 2'
+#   end
 
-  def olha3
-    'olha 3'
+#   def olha3
+#     'olha 3'
+#   end
+# end
+
+# puts cassio.olha1
+# puts cassio.olha2
+# puts cassio.olha3
+
+###########################################################################
+
+# definindo métodos de classe em escala
+class Cassio
+  class << self
+    def olha1
+      'olha 1'
+    end
+
+    def olha2
+      'olha 2'
+    end
+
+    def olha3
+      'olha 3'
+    end
   end
 end
 
-puts cassio.olha1
-puts cassio.olha2
-puts cassio.olha3
+puts Cassio.olha1
+
