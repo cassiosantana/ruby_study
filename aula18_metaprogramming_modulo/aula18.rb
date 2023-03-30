@@ -9,3 +9,7 @@ end
 cassio.olha
 a = cassio.clone
 puts a.olha
+
+b = cassio.dup
+puts b
+puts b.olha # undefined method `olha' for "teste":String
