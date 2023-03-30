@@ -42,21 +42,36 @@
 ###########################################################################
 
 # definindo métodos de classe em escala
+# class Cassio
+#   class << self
+#     def olha1
+#       'olha 1'
+#     end
+
+#     def olha2
+#       'olha 2'
+#     end
+
+#     def olha3
+#       'olha 3'
+#     end
+#   end
+# end
+
+# puts Cassio.olha1
+
+###########################################################################
+
+# definindo get e set como métodos de classe
 class Cassio
-  class << self
-    def olha1
-      'olha 1'
-    end
+  def self.nome=(value)
+    @nome = value
+  end
 
-    def olha2
-      'olha 2'
-    end
-
-    def olha3
-      'olha 3'
-    end
+  def self.nome
+    @nome
   end
 end
 
-puts Cassio.olha1
-
+Cassio.nome = 'Santana'
+puts Cassio.nome
