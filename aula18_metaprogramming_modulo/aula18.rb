@@ -113,16 +113,36 @@
 ###########################################################################
 
 # usando módulos para injetar códigos em classe
-module Validacoes
-  def validar_cpf
-    puts 'validado!'
+# module Validacoes
+#   def validar_cpf
+#     puts 'validado!'
+#   end
+
+#   def validar_cnpj
+#     puts 'validado!'
+#   end
+# end
+
+# a = 'cassio'
+# a.extend Validacoes
+# a.validar_cpf
+
+###########################################################################
+
+# também é possível utilizar módulos em tipos como String
+# assim toda String terá este método
+module Teste
+  def tirar_espacos
+    gsub(' ', '-')
   end
 
-  def validar_cnpj
-    puts 'validado!'
+  def imprimir_teste
+    print 'teste'
   end
 end
 
-a = 'cassio'
-a.extend Validacoes
-a.validar_cpf
+String.include Teste # incluo na instância
+String.extend Teste # incluo na classe
+
+# puts 'Cassio Roger de Santana'.tirar_espacos
+puts String.imprimir_teste
