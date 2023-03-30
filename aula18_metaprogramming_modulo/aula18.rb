@@ -64,12 +64,8 @@
 
 # definindo get e set como métodos de classe
 class Cassio
-  def self.nome=(value)
-    @nome = value
-  end
-
-  def self.nome
-    @nome
+  class << self
+    attr_accessor :nome
   end
 end
 
