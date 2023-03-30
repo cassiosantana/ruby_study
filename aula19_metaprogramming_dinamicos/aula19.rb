@@ -39,3 +39,21 @@ end
 
 # proc aceita mais parãmetros que o definido mas so utiliza o necessário.
 l.call 5, 5, 5, 1000
+
+puts '####################################################################'
+# eval serve para criar métodos dinâmicos
+atr = 'nome_do_método'
+eval("
+  def #{atr}(value)
+    @#{atr} = value
+  end
+")
+
+eval("
+  def mostra
+    @#{atr}
+  end
+")
+
+nome_do_método 'nome_novo'
+puts mostra
