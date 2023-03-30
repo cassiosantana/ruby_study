@@ -148,34 +148,57 @@
 # puts String.imprimir_teste
 
 ###########################################################################
-module Validacoes
-  def validar_cpf
-    puts 'validado!'
+# module Validacoes
+#   def validar_cpf
+#     puts 'validado!'
+#   end
+
+#   def validar_cnpj
+#     puts 'validado!'
+#   end
+# end
+
+# module Utilidades
+#   def validar_cpf
+#     puts 'validado!'
+#   end
+
+#   def validar_cnpj
+#     puts 'validado!'
+#   end
+# end
+
+# # neste exemplo abaixo tanto o include quanto extend causam o mesmo efeito
+# # devido ao class << self
+# class Teste
+#   class << self
+#     include Validacoes
+#   end
+
+#   class Teste
+#     extend Utilidades
+#   end
+# end
+
+###########################################################################
+# módulo dentro de módulo
+#
+module InstanciaEClasse
+  def instancia
+    puts 'método de instância'
   end
 
-  def validar_cnpj
-    puts 'validado!'
+  module Classe
+    def de_classe
+      puts 'método de classe'
+    end
   end
 end
 
-module Utilidades
-  def validar_cpf
-    puts 'validado!'
-  end
-
-  def validar_cnpj
-    puts 'validado!'
-  end
-end
-
-# neste exemplo abaixo tanto o include quanto extend causam o mesmo efeito
-# devido ao class << self
 class Teste
-  class << self
-    include Validacoes
-  end
-
-  class Teste
-    extend Utilidades
-  end
+  include InstanciaEClasse
+  extend InstanciaEClasse::Classe
 end
+
+Teste.new.instancia
+Teste.de_classe
