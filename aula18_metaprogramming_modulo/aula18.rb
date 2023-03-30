@@ -63,11 +63,31 @@
 ###########################################################################
 
 # definindo get e set como métodos de classe
-class Cassio
-  class << self
-    attr_accessor :nome
+# class Cassio
+#   class << self
+#     attr_accessor :nome
+#   end
+# end
+
+# Cassio.nome = 'Santana'
+# puts Cassio.nome
+
+###########################################################################
+
+# usando módulo como namespace
+module Utilidades
+  class Cpf
+    def validar
+      puts 'validado'
+    end
+  end
+
+  class Cnpj
+    def validar
+      puts 'validado'
+    end
   end
 end
 
-Cassio.nome = 'Santana'
-puts Cassio.nome
+Utilidades::Cpf.new.validar
+
