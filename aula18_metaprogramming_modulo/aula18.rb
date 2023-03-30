@@ -182,10 +182,38 @@
 
 ###########################################################################
 # módulo dentro de módulo
-#
+# module InstanciaEClasse
+#   def instancia
+#     puts 'método de instância'
+#   end
+
+#   module Classe
+#     def de_classe
+#       puts 'método de classe'
+#     end
+#   end
+# end
+
+# class Teste
+#   include InstanciaEClasse
+#   extend InstanciaEClasse::Classe
+# end
+
+# Teste.new.instancia
+# Teste.de_classe
+
+###########################################################################
+# de uma forma mais poderosa do que a anterior
+# podemos definir um método que se responsabiliza para que
+# a instancia que receber o include para herdar todos métodos de instãncia
+# também receba todos os métodos de classe automáticamente com apenas uma linha de código
 module InstanciaEClasse
   def instancia
     puts 'método de instância'
+  end
+
+  def self.included(cls)
+    cls.extend Classe
   end
 
   module Classe
@@ -197,7 +225,6 @@ end
 
 class Teste
   include InstanciaEClasse
-  extend InstanciaEClasse::Classe
 end
 
 Teste.new.instancia
