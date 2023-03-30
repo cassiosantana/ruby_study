@@ -13,3 +13,6 @@ puts a.olha
 b = cassio.dup
 puts b
 puts b.olha # undefined method `olha' for "teste":String
+
+# clone = copia valores de variáveis e métodos (comportamentos)
+# dup = duplica sem as valores das variáveis mas não a metaprogramação
