@@ -94,7 +94,26 @@
 ###########################################################################
 
 # usando módulos para injetar códigos em instância
-module Utilidades
+# module Utilidades
+#   def validar_cpf
+#     puts 'validado!'
+#   end
+
+#   def validar_cnpj
+#     puts 'validado!'
+#   end
+# end
+
+# class Cliente
+#   include Utilidades
+# end
+
+# Cliente.new.validar_cpf
+
+###########################################################################
+
+# usando módulos para injetar códigos em classe
+module Validacoes
   def validar_cpf
     puts 'validado!'
   end
@@ -104,8 +123,6 @@ module Utilidades
   end
 end
 
-class Cliente
-  include Utilidades
-end
-
-Cliente.new.validar_cpf
+a = 'cassio'
+a.extend Validacoes
+a.validar_cpf
