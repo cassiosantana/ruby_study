@@ -57,3 +57,49 @@ eval("
 
 nome_do_método 'nome_novo'
 puts mostra
+
+puts '####################################################################'
+# define method
+# define um método dinâmicamente
+class Teste
+  def self.definir(nome_do_metodo)
+    define_method(nome_do_metodo) do |parametro1, parametro2|
+      puts "#{parametro1} - #{parametro2}"
+    end
+  end
+end
+# o códico acima executa o mesmo que este abaixo porém este é estático
+# def metodo(parametro1, parametro2)
+#   puts "#{parametro1} - #{parametro2}"
+# end
+
+Teste.definir('novo_metodo1')
+Teste.definir('novo_metodo2')
+Teste.definir('novo_metodo3')
+Teste.definir('novo_metodo4')
+
+Teste.new.novo_metodo1 'Cassio', 'Santana'
+Teste.new.novo_metodo2 'Cassio', 'Santana'
+Teste.new.novo_metodo3 'Cassio', 'Santana'
+Teste.new.novo_metodo4 'Cassio', 'Santana'
+
+puts '####################################################################'
+# definindo métodos set com base em um array
+# esta forma será melhorada para ser aind mais genérica no próximo exemplo
+class Teste
+  def self.criar_metodo(nome_do_metodo)
+    define_method(nome_do_metodo) do |parametro|
+      puts parametro
+    end
+  end
+end
+
+['set_nome', 'set_email', 'set_endereco'].each do |nome_do_metodo|
+  Teste.criar_metodo nome_do_metodo
+end
+
+Teste.new.set_nome 'Cassio'
+Teste.new.set_email 'cassio@gmail.com'
+Teste.new.set_endereco 'Rua Ruby de Deus'
+
+
