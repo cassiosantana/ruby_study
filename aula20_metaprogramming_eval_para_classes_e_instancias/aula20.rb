@@ -29,3 +29,24 @@ end
 teste = Teste.new
 teste.instance_eval{puts @nome}
 teste.instance_eval{puts metodo_privado}
+
+puts '----------------------------------------------------'
+# definindo métodos para uma instância em tempo de execução
+teste.instance_eval do
+  def metodo_1
+    puts 'variavel 1'
+  end
+  def metodo_2
+    puts 'variavel 2'
+  end
+end
+
+teste.metodo_1
+teste.metodo_2
+
+# a prova de que os métodos foram definidos apenas para a instância teste
+# é que outras intâncias da mesma classe causam erro justamente por estes
+# métodos estarem indefinidos.
+teste2 = Teste.new
+# teste2.metodo_1 # undefined method `metodo_1'
+# teste2.metodo_2 # undefined method `metodo_2'
