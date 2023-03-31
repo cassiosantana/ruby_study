@@ -71,3 +71,21 @@ end
 
 Teste3.metodo1
 Teste3.metodo2
+
+puts '----------------------------------------------------'
+# usando o class_eval
+class Teste4; end
+
+# desta forma estou definindo métodos para a instância
+# da classe em tempo de execução
+Teste4.class_eval do
+  def metodo1
+    puts 'teste 4 - método 1'
+  end
+
+  def metodo2
+    puts 'teste 4 - método 2'
+  end
+end
+
+Teste4.new.metodo1
