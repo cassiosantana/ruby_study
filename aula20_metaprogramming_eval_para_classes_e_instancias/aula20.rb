@@ -89,3 +89,13 @@ Teste4.class_eval do
 end
 
 Teste4.new.metodo1
+
+puts '----------------------------------------------------'
+# definindo método para todas as instâncias de String
+String.class_eval do 
+  def metodo_novo
+    puts 'método novo'
+  end
+end
+
+'a'.metodo_novo
