@@ -47,6 +47,27 @@ teste.metodo_2
 # a prova de que os métodos foram definidos apenas para a instância teste
 # é que outras intâncias da mesma classe causam erro justamente por estes
 # métodos estarem indefinidos.
-teste2 = Teste.new
+# teste2 = Teste.new
 # teste2.metodo_1 # undefined method `metodo_1'
 # teste2.metodo_2 # undefined method `metodo_2'
+
+puts '----------------------------------------------------'
+
+class Teste3
+end
+
+# definindo métodos de classe
+# equivalente a usar a palava self. no início dos métodos ou
+# ou class << self e adicionar os métodos
+Teste3.instance_eval do
+  def metodo1
+    puts 'teste 3 - método 1'
+  end
+
+  def metodo2
+    puts 'teste 3 - método 2'
+  end
+end
+
+Teste3.metodo1
+Teste3.metodo2
