@@ -102,4 +102,35 @@ Teste.new.set_nome 'Cassio'
 Teste.new.set_email 'cassio@gmail.com'
 Teste.new.set_endereco 'Rua Ruby de Deus'
 
+puts '####################################################################'
+# forma semelhante de como os attr_accessor foram definidos
+module AtributosDinamicos
+  def atributos(*atributos)
+    atributos.each do |atributo|
+      # definindo um método set
+      define_method("#{atributo}=") do |value|
+        instance_variable_set "@#{atributo}", value
+      end
 
+      # definindo um método get
+      define_method("#{atributo}") do
+        instance_variable_get "@#{atributo}"
+      end
+    end
+  end
+end
+
+# caso a necessidade seja de apenas um dos método por exemplo
+# apenas o get basta apagar o define_method que o define
+
+class Teste
+  extend AtributosDinamicos
+  atributos :nome, :email
+  # attr_accessor :nome, :email
+end
+
+t = Teste.new
+t.nome = 'Roger'
+t.email = 'roger@gmail.com'
+puts t.nome
+puts t.email
