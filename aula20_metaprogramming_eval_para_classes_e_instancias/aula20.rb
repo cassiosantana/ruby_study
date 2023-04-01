@@ -135,27 +135,65 @@
 
 # String.ola
 
+# puts '----------------------------------------------------'
+
+# module AtributosDinamicos
+#   def atributo attr
+#     class_eval %{
+#       def #{attr}
+#         @#{attr}
+#       end
+
+#       def #{attr}= value
+#         @#{attr} = value
+#       end
+#     }
+#   end
+# end
+
+# class Teste3
+#   extend AtributosDinamicos
+#   atributo :nome
+# end
+
+# teste3 = Teste3.new
+# teste3.nome = 'roger'
+# puts teste3.nome
+
 puts '----------------------------------------------------'
+# o eval deve ser utilizado com muito cuidado
+# visto que com ele é possível ter acesso total a atributos
+# mesmo privados
+class ClasseBloco
+  def metodo1
+    puts 'metodo1'
+  end
 
-module AtributosDinamicos
-  def atributo attr
-    class_eval %{
-      def #{attr}
-        @#{attr}
-      end
+  def metodo2
+    puts 'metodo2'
+  end
 
-      def #{attr}= value
-        @#{attr} = value
-      end
-    }
+  def metodo_acesso_total(&bloco)
+    instance_eval(&bloco)
+  end
+
+  private
+
+  def metodo3
+    puts 'metodo3'
   end
 end
 
-class Teste3
-  extend AtributosDinamicos
-  atributo :nome
+classe_bloco = ClasseBloco.new
+classe_bloco.metodo_acesso_total do
+  metodo1
+  metodo2
+  # eval consegue expor até métodos privados
+  metodo3
+
+  def metodo_em_bloco
+    puts 'método em bloco'
+  end
 end
 
-teste3 = Teste3.new
-teste3.nome = 'roger'
-puts teste3.nome
+classe_bloco.metodo_em_bloco
