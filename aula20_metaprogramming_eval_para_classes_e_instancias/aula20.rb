@@ -90,37 +90,47 @@
 
 # Teste4.new.metodo1
 
+# puts '----------------------------------------------------'
+# # definindo método para todas as instâncias de String
+# String.class_eval do 
+#   def de_instancia
+#     puts 'método de_instancia'
+#   end
+# end
+
+# 'a'.de_instancia
+
+# # a definição acima equivale a esta
+# nome = 'cassio'
+# def nome.de_instancia2
+#   puts 'método de_instancia 2'
+# end
+
+# nome.de_instancia2
+
+# puts '----------------------------------------------------'
+# # definindo método de classe para a classe String
+# String.instance_eval do
+#   def de_classe
+#     puts 'método de_classe'
+#   end
+# end
+
+# String.de_classe
+
+# # a definição acima equivale a esta
+# def String.de_classe2
+#   puts 'método de_classe 2'
+# end
+
+# String.de_classe2
+
 puts '----------------------------------------------------'
-# definindo método para todas as instâncias de String
-String.class_eval do 
-  def de_instancia
-    puts 'método de_instancia'
+# mais uma forma definindo método de classe para a classe String
+class << String
+  def ola
+    puts 'olá'
   end
 end
 
-'a'.de_instancia
-
-# a definição acima equivale a esta
-nome = 'cassio'
-def nome.de_instancia2
-  puts 'método de_instancia 2'
-end
-
-nome.de_instancia2
-
-puts '----------------------------------------------------'
-# definindo método de class para a classe String
-String.instance_eval do
-  def de_classe
-    puts 'método de_classe'
-  end
-end
-
-String.de_classe
-
-# a definição acima equivale a esta
-def String.de_classe2
-  puts 'método de_classe 2'
-end
-
-String.de_classe2
+String.ola
