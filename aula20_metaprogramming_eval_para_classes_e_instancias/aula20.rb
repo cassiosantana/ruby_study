@@ -125,12 +125,37 @@
 
 # String.de_classe2
 
+# puts '----------------------------------------------------'
+# # mais uma forma definindo método de classe para a classe String
+# class << String
+#   def ola
+#     puts 'olá'
+#   end
+# end
+
+# String.ola
+
 puts '----------------------------------------------------'
-# mais uma forma definindo método de classe para a classe String
-class << String
-  def ola
-    puts 'olá'
+
+module AtributosDinamicos
+  def atributo attr
+    class_eval %{
+      def #{attr}
+        @#{attr}
+      end
+
+      def #{attr}= value
+        @#{attr} = value
+      end
+    }
   end
 end
 
-String.ola
+class Teste3
+  extend AtributosDinamicos
+  atributo :nome
+end
+
+teste3 = Teste3.new
+teste3.nome = 'roger'
+puts teste3.nome
