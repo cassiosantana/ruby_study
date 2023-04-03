@@ -19,4 +19,14 @@ RSpec.describe Aula17 do
 
     expect(valor).to eq('nova string')
   end
+
+  it 'Exemplo 02 - método em constante' do
+    def String.mostrar_nova_string2
+      'nova string 2'
+    end
+
+    valor = String.mostrar_nova_string2
+
+    expect(valor).to eq('nova string 2')
+  end
 end
