@@ -14,4 +14,16 @@ RSpec.describe Aula18 do
     expect(fiesta.proprietario).to eq('cassio')
     expect(fiesta.portas).to eq(4)
   end
+
+  it 'Dup - estado' do
+    palio = Aula18::Carro.new
+
+    # método em runtime
+    def palio.portas
+      4
+    end
+
+    fiesta = palio.dup
+    expect(fiesta.proprietario).to eq('cassio')
+  end
 end
