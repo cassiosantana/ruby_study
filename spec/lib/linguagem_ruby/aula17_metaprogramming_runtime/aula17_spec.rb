@@ -29,4 +29,15 @@ RSpec.describe Aula17 do
 
     expect(valor).to eq('nova string 2')
   end
+
+  it 'Exemplo 03 - sobrescrição de métodos' do
+    golf = Aula17::Carro.new
+
+    def golf.mostrar
+      'mostrar do fiesta'
+    end
+
+    valor = golf.mostrar
+    expect(valor).to eq('mostrar do fiesta')
+  end
 end

@@ -5,4 +5,11 @@ module Aula17
   # exemplo 01
   class Exemplo01
   end
+
+  # exemplo 03
+  class Carro
+    def mostrar
+      'marca padrao'
+    end
+  end
 end
