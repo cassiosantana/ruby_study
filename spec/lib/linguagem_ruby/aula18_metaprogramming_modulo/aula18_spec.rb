@@ -26,4 +26,26 @@ RSpec.describe Aula18 do
     fiesta = palio.dup
     expect(fiesta.proprietario).to eq('cassio')
   end
+
+  it 'Atribuição multipla de métodos com <<' do
+    palio = Aula18::Carro.new
+    class << palio
+      def portas
+        4
+      end
+
+      def aro
+        14
+      end
+
+      def cor
+        'preto'
+      end
+    end
+
+    expect(palio.proprietario).to eq('cassio')
+    expect(palio.portas).to eq(4)
+    expect(palio.portas).to eq(4)
+    expect(palio.cor).to eq('preto')
+  end
 end
