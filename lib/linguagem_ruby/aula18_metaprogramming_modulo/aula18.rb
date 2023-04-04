@@ -40,3 +40,15 @@ module Utilidades
     gsub(" ", "-")
   end
 end
+
+module Textos
+  def texto
+    'texto'
+  end
+
+  module SubTextos
+    def subtexto
+      'subtexto'
+    end
+  end
+end
