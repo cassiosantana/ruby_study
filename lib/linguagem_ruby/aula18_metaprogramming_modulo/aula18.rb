@@ -11,3 +11,17 @@ module Aula18
     end
   end
 end
+
+module Utilidades
+  class Cpf
+    def validar_cpf
+      'cpf validado'
+    end
+  end
+
+  class Cnpj
+    def validar_cnpj
+      'cnpj validado'
+    end
+  end
+end
