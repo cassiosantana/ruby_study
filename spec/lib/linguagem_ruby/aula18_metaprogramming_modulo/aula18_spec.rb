@@ -75,4 +75,11 @@ RSpec.describe Aula18 do
 
     expect(resultado).to eq('cnpj validado 2')
   end
+
+  it 'Moludo em insância com include' do
+    String.include Utilidades
+    resultado = 'cassio roger de santana'.tirar_espacos
+
+    expect(resultado).to eq('cassio-roger-de-santana')
+  end
 end
