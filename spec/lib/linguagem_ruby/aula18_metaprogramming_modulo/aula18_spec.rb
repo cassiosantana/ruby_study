@@ -58,7 +58,6 @@ RSpec.describe Aula18 do
   end
 
   it 'Moludo em instância' do
-
     teste = Utilidades::Teste.new
     teste.extend Utilidades
 
@@ -67,5 +66,13 @@ RSpec.describe Aula18 do
 
     expect(cpf2).to eq('cpf validado 2')
     expect(cnpj2).to eq('cnpj validado 2')
+  end
+
+  it 'Moludo em tipo String' do
+    String.extend Utilidades
+
+    resultado = String.validar_cnpj2
+
+    expect(resultado).to eq('cnpj validado 2')
   end
 end
