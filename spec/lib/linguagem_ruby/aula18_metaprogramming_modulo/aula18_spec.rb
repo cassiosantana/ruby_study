@@ -49,7 +49,7 @@ RSpec.describe Aula18 do
     expect(palio.cor).to eq('preto')
   end
 
-  it 'Moludo como namespace' do
+  it 'Módulo como namespace' do
     cpf = Utilidades::Cpf.new.validar_cpf
     cnpj = Utilidades::Cnpj.new.validar_cnpj
 
@@ -57,7 +57,7 @@ RSpec.describe Aula18 do
     expect(cnpj).to eq('cnpj validado')
   end
 
-  it 'Moludo em instância' do
+  it 'Módulo em instância' do
     teste = Utilidades::Teste.new
     teste.extend Utilidades
 
@@ -68,7 +68,7 @@ RSpec.describe Aula18 do
     expect(cnpj2).to eq('cnpj validado 2')
   end
 
-  it 'Moludo em tipo String' do
+  it 'Módulo em tipo String' do
     String.extend Utilidades
 
     resultado = String.validar_cnpj2
@@ -83,7 +83,7 @@ RSpec.describe Aula18 do
     expect(resultado).to eq('cassio-roger-de-santana')
   end
 
-  it 'Modulo em classe usando include e extend' do
+  it 'Módulo em classe usando include e extend' do
     class ClasseTeste1
       # desta forma o include injeta o código na classe
       class << self
@@ -101,5 +101,18 @@ RSpec.describe Aula18 do
 
     expect(resultado1).to eq('cpf validado 2')
     expect(resultado2).to eq('cpf validado 2')
+  end
+
+  it 'Móludo dentro de módulo - inclui em classe e instância' do
+    class TesteTextos
+      include Textos # instância
+      extend Textos::SubTextos # classe
+    end
+
+    teste_textos = TesteTextos.new.texto
+    teste_subtexto = TesteTextos.subtexto
+
+    expect(teste_textos).to eq('texto')
+    expect(teste_subtexto).to eq('subtexto')
   end
 end
