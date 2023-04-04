@@ -82,4 +82,24 @@ RSpec.describe Aula18 do
 
     expect(resultado).to eq('cassio-roger-de-santana')
   end
+
+  it 'Modulo em classe usando include e extend' do
+    class ClasseTeste1
+      # desta forma o include injeta o código na classe
+      class << self
+        include Utilidades
+      end
+    end
+
+    class ClasseTeste2
+      # equivalente à classe anterior
+      extend Utilidades
+    end
+
+    resultado1 = ClasseTeste1.validar_cpf2
+    resultado2 = ClasseTeste2.validar_cpf2
+
+    expect(resultado1).to eq('cpf validado 2')
+    expect(resultado2).to eq('cpf validado 2')
+  end
 end
