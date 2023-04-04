@@ -115,4 +115,16 @@ RSpec.describe Aula18 do
     expect(teste_textos).to eq('texto')
     expect(teste_subtexto).to eq('subtexto')
   end
+
+  it 'included' do
+    class NovaClasse
+      include InstanciaEClasse
+    end
+
+    teste_instancia = NovaClasse.new.metodo_instancia
+    teste_classe = NovaClasse.metodo_classe
+
+    expect(teste_instancia).to eq('metodo instância')
+    expect(teste_classe).to eq('metodo classe')
+  end
 end
