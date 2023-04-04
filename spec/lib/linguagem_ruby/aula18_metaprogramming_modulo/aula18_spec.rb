@@ -48,14 +48,24 @@ RSpec.describe Aula18 do
     expect(palio.portas).to eq(4)
     expect(palio.cor).to eq('preto')
   end
-end
 
-RSpec.describe Utilidades do
   it 'Moludo como namespace' do
     cpf = Utilidades::Cpf.new.validar_cpf
     cnpj = Utilidades::Cnpj.new.validar_cnpj
 
     expect(cpf).to eq('cpf validado')
     expect(cnpj).to eq('cnpj validado')
+  end
+
+  it 'Moludo em instância' do
+
+    teste = Utilidades::Teste.new
+    teste.extend Utilidades
+
+    cpf2 = teste.validar_cpf2
+    cnpj2 = teste.validar_cnpj2
+
+    expect(cpf2).to eq('cpf validado 2')
+    expect(cnpj2).to eq('cnpj validado 2')
   end
 end
