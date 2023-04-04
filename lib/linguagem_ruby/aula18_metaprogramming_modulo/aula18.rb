@@ -24,4 +24,15 @@ module Utilidades
       'cnpj validado'
     end
   end
+
+  class Teste
+  end
+
+  def validar_cpf2
+    'cpf validado 2'
+  end
+
+  def validar_cnpj2
+    'cnpj validado 2'
+  end
 end
