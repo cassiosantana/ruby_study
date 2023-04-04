@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "my_study_ruby"
+require "linguagem_ruby"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
