@@ -35,4 +35,8 @@ module Utilidades
   def validar_cnpj2
     'cnpj validado 2'
   end
+
+  def tirar_espacos
+    gsub(" ", "-")
+  end
 end
