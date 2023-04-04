@@ -52,3 +52,21 @@ module Textos
     end
   end
 end
+
+module InstanciaEClasse
+  def metodo_instancia
+    'metodo instância'
+  end
+
+  # método que ao usar include automáticamente
+  # aplica o extend
+  def self.included(cls)
+    cls.extend Classe
+  end
+
+  module Classe
+    def metodo_classe
+      'metodo classe'
+    end
+  end
+end
