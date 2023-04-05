@@ -18,4 +18,10 @@ RSpec.describe Aula19 do
       expect { l.call 5, 6 }.to raise_error ArgumentError
     end
   end
+  context 'Proc' do
+    it 'Proc sintaxe 01 em uma linha' do
+      p = proc { |x| x * 10 }
+      expect(p.call(5)).to eq(50)
+    end
+  end
 end
