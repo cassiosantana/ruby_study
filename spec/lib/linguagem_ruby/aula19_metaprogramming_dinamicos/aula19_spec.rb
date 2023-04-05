@@ -23,12 +23,22 @@ RSpec.describe Aula19 do
       p = proc { |x| x * 10 }
       expect(p.call(5)).to eq(50)
     end
-    
+
     it 'Proc sintaxe 02 com bloco do~end' do
       p = proc do |x|
         x * 10
       end
       expect(p.call(5)).to eq(50)
+    end
+
+    it 'Proc com argumentos' do
+      p = proc do |arg1, arg2|
+        "Nome: #{arg1}, Sobrenome: #{arg2}"
+      end
+      nome = 'Cassio'
+      sobrenome = 'Santana'
+
+      expect(p.call(nome, sobrenome)).to eq('Nome: Cassio, Sobrenome: Santana')
     end
   end
 end
