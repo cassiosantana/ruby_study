@@ -40,5 +40,15 @@ RSpec.describe Aula19 do
 
       expect(p.call(nome, sobrenome)).to eq('Nome: Cassio, Sobrenome: Santana')
     end
+
+    it 'Proc recebendo menos argumentos' do
+      # não causa erro desde que o argumento faltante não seja
+      # para utilizar em operações matemáticas etc...
+      p = proc do |arg1, arg2|
+        "Nome: #{arg1}, Sobrenome: #{arg2}"
+      end
+      nome = 'Cassio'
+      expect(p.call(nome)).to eq('Nome: Cassio, Sobrenome: ')
+    end
   end
 end
