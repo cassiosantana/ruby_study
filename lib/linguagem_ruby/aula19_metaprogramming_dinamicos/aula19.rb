@@ -1,8 +1,7 @@
 # metaprogramming dinâmicos
 module Aula19
   class ExemplosAula19
-    # # lambda não aceita menos pâmetros do que os definidos
-    # # lambda aceita mais parâmetros que os definidos
+    # # lambda não aceita menos nem mais pâmetros do que os definidos
     # l = lambda {|parametro| parametro * 5}
     # puts l.call 5
 

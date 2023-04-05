@@ -11,4 +11,9 @@ RSpec.describe Aula19 do
     l = ->(x, y) { x * y }
     expect { l.call 5 }.to raise_error ArgumentError
   end
+
+  it 'ArgumentError - Lambda com mais parâmetros' do
+    l = ->(x) { x * x }
+    expect { l.call 5, 6 }.to raise_error ArgumentError
+  end
 end
