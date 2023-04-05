@@ -59,4 +59,11 @@ RSpec.describe Aula19 do
       expect(p.call(5, 6)).to eq(50)
     end
   end
+  context 'Eval' do
+    it 'Eval sintaxe' do
+      # interpreta a string como um código ruby
+      resultado = eval("soma = 5 + 5")
+      expect(resultado).to eq(10)
+    end
+  end
 end
