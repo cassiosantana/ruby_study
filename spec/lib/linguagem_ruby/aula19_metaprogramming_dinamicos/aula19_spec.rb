@@ -50,5 +50,13 @@ RSpec.describe Aula19 do
       nome = 'Cassio'
       expect(p.call(nome)).to eq('Nome: Cassio, Sobrenome: ')
     end
+
+    it 'Proc recebendo mais argumentos' do
+      # não causa erro
+      p = proc do |x|
+        x * 10
+      end
+      expect(p.call(5, 6)).to eq(50)
+    end
   end
 end
