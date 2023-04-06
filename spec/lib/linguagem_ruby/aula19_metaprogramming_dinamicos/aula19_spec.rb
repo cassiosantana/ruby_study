@@ -73,5 +73,21 @@ RSpec.describe Aula19 do
       string = Aula19::TesteDefineMethod.new.metodo_teste 'Cassio'
       expect(string).to eq('parâmetro: Cassio')
     end
+
+    it 'Definir método dinâmicamente com each' do
+      %w[metodo1 metodo2 metodo3].each do |parametro|
+        Aula19::TesteDefineMethod.definir parametro
+      end
+
+      classe_teste = Aula19::TesteDefineMethod.new
+      string1 = classe_teste.metodo1 'Cassio'
+      string2 = classe_teste.metodo2 'Roger'
+      string3 = classe_teste.metodo3 'Santana'
+
+      expect(string1).to eq('parâmetro: Cassio')
+      expect(string2).to eq('parâmetro: Roger')
+      expect(string3).to eq('parâmetro: Santana')
+      expect { classe_teste.metodo4 'Erro' }.to raise_error NoMethodError
+    end
   end
 end
