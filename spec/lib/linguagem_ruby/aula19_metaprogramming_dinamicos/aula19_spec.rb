@@ -66,4 +66,12 @@ RSpec.describe Aula19 do
       expect(resultado).to eq(10)
     end
   end
+
+  context 'define_method' do
+    it 'Definir método dinâmicamente' do
+      Aula19::TesteDefineMethod.definir 'metodo_teste'
+      string = Aula19::TesteDefineMethod.new.metodo_teste 'Cassio'
+      expect(string).to eq('parâmetro: Cassio')
+    end
+  end
 end
