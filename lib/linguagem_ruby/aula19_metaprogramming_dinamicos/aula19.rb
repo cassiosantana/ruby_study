@@ -144,4 +144,19 @@ module Aula19
       end
     end
   end
+
+  # exemplo de como funciona o attr_accessor
+  def atributos *atributos
+    atributos.each do |atributo|
+      define_method("#{atributo}=") do |valor|
+        instance_variable_set "@#{atributo}", valor
+      end
+    end
+
+    atributos.each do |atributo|
+      define_method("#{atributo}") do
+        instance_variable_get "@#{atributo}"
+      end
+    end
+  end
 end
