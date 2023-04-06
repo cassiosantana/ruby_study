@@ -135,4 +135,13 @@ module Aula19
     # puts t.nome
     # puts t.email
   end
+
+  # classe para que contém método que define métodos
+  class TesteDefineMethod
+    def self.definir(valor)
+      define_method(valor) do |parametro|
+        "parâmetro: #{parametro}"
+      end
+    end
+  end
 end
