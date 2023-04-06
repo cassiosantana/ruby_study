@@ -89,5 +89,19 @@ RSpec.describe Aula19 do
       expect(string3).to eq('parâmetro: Santana')
       expect { classe_teste.metodo4 'Erro' }.to raise_error NoMethodError
     end
+
+    it 'Usando módulo para definir métodos' do
+      class Teste
+        extend Aula19
+        atributos :nome, :email
+      end
+
+      classe_teste = Teste.new
+      classe_teste.nome = 'Cassio'
+      classe_teste.email = 'cassio@gmail.com'
+
+      expect(classe_teste.nome).to eq('Cassio')
+      expect(classe_teste.email).to eq('cassio@gmail.com')
+    end
   end
 end
