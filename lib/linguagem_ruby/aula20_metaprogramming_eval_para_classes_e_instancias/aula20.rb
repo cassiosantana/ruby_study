@@ -20,4 +20,21 @@ module Aula20
   # classe de teste numero 2
   class ClasseTesteDois
   end
+
+  # class de teste numero 3
+  class ClasseTesteTres
+    def metodo1
+      'metodo 1'
+    end
+
+    def metodo_aberto(&bloco)
+      instance_eval(&bloco)
+    end
+
+    private
+
+    def metodo3
+      'metodo 3'
+    end
+  end
 end
