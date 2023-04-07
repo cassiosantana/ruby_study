@@ -36,5 +36,16 @@ RSpec.describe Aula20 do
       end
       expect(teste_tres.metodo_nome).to eq('Santana')
     end
+
+    it 'Definir em classe' do
+      # o mesmo que utilizar o self.metodo_idade
+      Aula20::ClasseTesteUm.instance_eval do
+        def metodo_idade
+          33
+        end
+      end
+      idade = Aula20::ClasseTesteUm.metodo_idade
+      expect(idade).to eq(33)
+    end
   end
 end
