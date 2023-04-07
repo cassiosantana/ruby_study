@@ -11,4 +11,12 @@ RSpec.describe Aula20 do
       expect(resultado).to eq(10)
     end
   end
+
+  context 'Expor atributos' do
+    it 'Expor valores de variáveis privadas' do
+      teste_um = Aula20::ClasseTesteUm.new
+      nome = teste_um.instance_eval { @nome }
+      expect(nome).to eq('Cassio')
+    end
+  end
 end
