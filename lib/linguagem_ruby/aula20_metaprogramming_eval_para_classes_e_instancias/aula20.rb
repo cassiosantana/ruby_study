@@ -16,4 +16,8 @@ module Aula20
       'Roger'
     end
   end
+
+  # classe de teste numero 2
+  class ClasseTesteDois
+  end
 end
