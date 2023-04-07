@@ -57,4 +57,18 @@ RSpec.describe Aula20 do
       expect(String.metodo_altura).to eq(172)
     end
   end
+
+  context 'Definições com class_eval' do
+    it 'Definido método na instância' do
+      Aula20::ClasseTesteUm.class_eval do
+        def metodo_email
+          'cassio@gmail.com'
+        end
+      end
+      teste_quatro = Aula20::ClasseTesteUm.new
+      email = teste_quatro.metodo_email
+  
+      expect(email).to eq('cassio@gmail.com')
+    end
+  end
 end
