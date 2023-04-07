@@ -18,5 +18,11 @@ RSpec.describe Aula20 do
       nome = teste_um.instance_eval { @nome }
       expect(nome).to eq('Cassio')
     end
+
+    it 'Expor método privado' do
+      teste_dois = Aula20::ClasseTesteUm.new
+      nome = teste_dois.instance_eval { meu_nome }
+      expect(nome).to eq('Roger')
+    end
   end
 end
