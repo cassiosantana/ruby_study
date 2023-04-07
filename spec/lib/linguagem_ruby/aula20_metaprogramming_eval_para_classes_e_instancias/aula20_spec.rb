@@ -67,8 +67,19 @@ RSpec.describe Aula20 do
       end
       teste_quatro = Aula20::ClasseTesteUm.new
       email = teste_quatro.metodo_email
-  
+
       expect(email).to eq('cassio@gmail.com')
+    end
+    it 'Definido método para classe String' do
+      String.class_eval do
+        def data_hoje
+          '07/04/2023'
+        end
+      end
+
+      a = 'data de hoje'
+      data = a.data_hoje
+      expect(data).to eq('07/04/2023')
     end
   end
 end
