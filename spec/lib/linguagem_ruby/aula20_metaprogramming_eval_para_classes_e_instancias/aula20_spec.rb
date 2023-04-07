@@ -82,4 +82,14 @@ RSpec.describe Aula20 do
       expect(data).to eq('07/04/2023')
     end
   end
+
+  context 'Injetado código com eval dinamicamente' do
+    it 'Método com class_eval' do
+      Aula20::ClasseTesteDois.extend AtributoDinamico
+      Aula20::ClasseTesteDois.atributo(:nome)
+      classe_teste2 = Aula20::ClasseTesteDois.new
+      classe_teste2.nome = 'Cassio Santana'
+      expect(classe_teste2.nome).to eq('Cassio Santana')
+    end
+  end
 end
