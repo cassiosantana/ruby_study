@@ -25,4 +25,16 @@ RSpec.describe Aula20 do
       expect(nome).to eq('Roger')
     end
   end
+
+  context 'Definir métodos com instance_eval' do
+    it 'Definir em instância' do
+      teste_tres = Aula20::ClasseTesteUm.new
+      teste_tres.instance_eval do
+        def metodo_nome
+          'Santana'
+        end
+      end
+      expect(teste_tres.metodo_nome).to eq('Santana')
+    end
+  end
 end
