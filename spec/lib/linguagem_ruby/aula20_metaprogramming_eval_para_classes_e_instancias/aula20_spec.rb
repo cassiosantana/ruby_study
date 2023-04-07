@@ -47,5 +47,14 @@ RSpec.describe Aula20 do
       idade = Aula20::ClasseTesteUm.metodo_idade
       expect(idade).to eq(33)
     end
+
+    it 'Definir em classe com <<' do
+      class << String
+        def metodo_altura
+          172
+        end
+      end
+      expect(String.metodo_altura).to eq(172)
+    end
   end
 end
