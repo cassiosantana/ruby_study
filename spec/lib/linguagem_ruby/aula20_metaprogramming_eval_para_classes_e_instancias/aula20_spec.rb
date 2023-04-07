@@ -91,5 +91,18 @@ RSpec.describe Aula20 do
       classe_teste2.nome = 'Cassio Santana'
       expect(classe_teste2.nome).to eq('Cassio Santana')
     end
+
+    it 'Método com instance_eval' do
+      classe_teste3 = Aula20::ClasseTesteTres.new
+        resultado = classe_teste3.metodo_aberto do
+          def metodo4
+            'metodo 4'
+          end
+          metodo3
+        end
+      expect(classe_teste3.metodo1).to eq('metodo 1')
+      expect(resultado).to eq('metodo 3')
+      expect(classe_teste3.metodo4).to eq('metodo 4')
+    end
   end
 end
