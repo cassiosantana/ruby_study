@@ -38,3 +38,17 @@ module Aula20
     end
   end
 end
+
+# módutlo de teste
+module AtributoDinamico
+  def atributo(atr)
+    class_eval %{
+      def #{atr}
+        @#{atr}
+      end
+      def #{atr}=(value)
+        @#{atr} = value
+      end
+    }
+  end
+end
