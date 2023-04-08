@@ -21,4 +21,22 @@ module Aula21
       end
     end
   end
+
+  # classe teste 3
+  class TesteTres
+    def definir_classe(classe, nome_metodo)
+      if classe.is_a?(String)
+        classe = classe.capitalize
+        eval("class #{classe} end")
+        classe = Object.const_get(classe)
+      end
+
+      classe.class_eval do
+        define_method(nome_metodo) do |*parametros|
+          "O valor dos parâmetros é #{parametros.join('-')}"
+        end
+      end
+      classe
+    end
+  end
 end
