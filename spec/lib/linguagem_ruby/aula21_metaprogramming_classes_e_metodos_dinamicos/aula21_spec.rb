@@ -45,4 +45,16 @@ RSpec.describe Aula21 do
     expect(resultado2).to eq('metodo2 foi definido')
     expect(resultado3).to eq('metodo3 foi definido')
   end
+
+  it 'Criados classe e métodos dinâmicamente em lote' do
+    %w[mostrar exibir visualizar].each do |metodo|
+      Aula21::TesteTres.new.definir_classe('cassio', metodo)
+    end
+
+    valor_mostrar = Cassio.new.mostrar 1, 2, 3
+    valor_exibir = Cassio.new.exibir 'cassio', 'roger', 'santana'
+
+    expect(valor_mostrar).to eq('O valor dos parâmetros é 1-2-3')
+    expect(valor_exibir).to eq('O valor dos parâmetros é cassio-roger-santana')
+  end
 end
