@@ -34,4 +34,15 @@ RSpec.describe Aula21 do
 
     expect(arr).to eq([Produto, Cliente, Pedido])
   end
+
+  it 'Criados métodos dinâmicamente em lote' do
+    Aula21::TesteDois.definir 'metodo1', 'metodo2', 'metodo3'
+    resultado1 = Aula21::TesteDois.new.metodo1
+    resultado2 = Aula21::TesteDois.new.metodo2
+    resultado3 = Aula21::TesteDois.new.metodo3
+
+    expect(resultado1).to eq('metodo1 foi definido')
+    expect(resultado2).to eq('metodo2 foi definido')
+    expect(resultado3).to eq('metodo3 foi definido')
+  end
 end
