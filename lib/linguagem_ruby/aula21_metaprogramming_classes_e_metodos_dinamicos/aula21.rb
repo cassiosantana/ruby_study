@@ -10,4 +10,15 @@ module Aula21
       end
     end
   end
+
+  # classe teste 2
+  class TesteDois
+    def self.definir(*metodos)
+      metodos.each do |metodo|
+        define_method(metodo) do
+          "#{metodo} foi definido"
+        end
+      end
+    end
+  end
 end
