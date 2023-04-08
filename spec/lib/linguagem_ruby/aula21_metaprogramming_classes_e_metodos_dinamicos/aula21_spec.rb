@@ -12,10 +12,26 @@ RSpec.describe Aula21 do
 
     expect(classe.class).to eq(Class)
   end
-  
+
   it 'Criado método dinâmicamente' do
     Aula21::TesteUm.definir 'teste'
     resultado = Aula21::TesteUm.new.teste
     expect(resultado).to eq('metodo definido')
+  end
+
+  it 'Criadas classes dinâmicamente em lote' do
+    def definir_classe(nome_classe)
+      classe = nome_classe.capitalize
+      eval("class #{classe} end")
+      Object.const_get(classe)
+    end
+
+    arr = []
+
+    %w[produto cliente pedido].each do |nome_classe|
+      arr << definir_classe(nome_classe)
+    end
+
+    expect(arr).to eq([Produto, Cliente, Pedido])
   end
 end
