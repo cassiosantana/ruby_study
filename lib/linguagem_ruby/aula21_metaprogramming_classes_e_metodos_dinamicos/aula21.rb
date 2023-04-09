@@ -40,4 +40,20 @@ module Aula21
   class TesteTres
     include Aula21
   end
+
+  # classe teste 4
+  class TesteQuatro
+    include Aula21
+
+    def arrs(classes, metodos)
+      arr_classes = []
+      classes.each do |classe|
+        metodos.each do |metodo|
+          classe = definir_classe(classe, metodo)
+        end
+        arr_classes << classe
+      end
+      arr_classes
+    end
+  end
 end
