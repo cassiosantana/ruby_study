@@ -57,4 +57,12 @@ RSpec.describe Aula21 do
     expect(valor_mostrar).to eq('O valor dos parâmetros é 1-2-3')
     expect(valor_exibir).to eq('O valor dos parâmetros é cassio-roger-santana')
   end
+
+  it 'Chamado todos os métodos da classe' do
+    %w[mostrar exibir visualizar].each do |metodo|
+      Aula21::TesteTres.new.definir_classe 'cassio', metodo
+      valor = Cassio.new.send(metodo, 1, 2, 3)
+      expect(valor).to eq('O valor dos parâmetros é 1-2-3')
+    end
+  end
 end
