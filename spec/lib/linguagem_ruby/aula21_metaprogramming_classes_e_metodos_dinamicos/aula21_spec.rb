@@ -89,4 +89,12 @@ RSpec.describe Aula21 do
       end
     end
   end
+
+  it 'Recebido array de classes' do
+    classes = %w[Cassio Roger Santana]
+    metodos = %w[mostrar exibir visualizar]
+
+    arr = Aula21::TesteQuatro.new.arrs(classes, metodos)
+    expect(arr).to eq([Cassio, Roger, Santana])
+  end
 end
