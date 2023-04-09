@@ -65,4 +65,28 @@ RSpec.describe Aula21 do
       expect(valor).to eq('O valor dos parâmetros é 1-2-3')
     end
   end
+
+  it 'Chamado classes e métodos dinâmicamente em lote' do
+    def definir_classe(classe, nome_metodo)
+      if classe.is_a?(String)
+        classe = classe.capitalize
+        eval("class #{classe} end")
+        classe = Object.const_get(classe)
+      end
+
+      classe.class_eval do
+        define_method(nome_metodo) do |*parametros|
+          "O valor dos parâmetros é #{parametros.join('-')}"
+        end
+      end
+    end
+
+    %w[Cassio Roger Santana].each do |classe|
+      %w[mostrar exibir visualizar].each do |metodo|
+        definir_classe classe, metodo
+        valor = Object.const_get(classe).new.send metodo, 1, 2, 3
+        expect(valor).to eq('O valor dos parâmetros é 1-2-3')
+      end
+    end
+  end
 end
