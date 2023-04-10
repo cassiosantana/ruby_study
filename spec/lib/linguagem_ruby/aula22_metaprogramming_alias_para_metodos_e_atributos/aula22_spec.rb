@@ -13,4 +13,9 @@ RSpec.describe Aula22 do
     resultado = Aula22::ClasseTeste3.new.ola
     expect(resultado).to eq('olá sobrescrito - olha original')
   end
+
+  it 'Sobrescrito método + alias_method' do
+    resultado = Aula22::ClasseTeste4.new.todos
+    expect(resultado).to eq('olha original ------------- olá sobrescrito')
+  end
 end
