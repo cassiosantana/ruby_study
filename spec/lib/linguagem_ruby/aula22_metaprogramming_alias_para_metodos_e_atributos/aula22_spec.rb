@@ -8,4 +8,9 @@ RSpec.describe Aula22 do
     resultado = Aula22::ClasseTeste2.new.ola
     expect(resultado).to eq('olá sobrescrito')
   end
+
+  it 'Sobrescrito método herdado + super' do
+    resultado = Aula22::ClasseTeste3.new.ola
+    expect(resultado).to eq('olá sobrescrito - olha original')
+  end
 end
