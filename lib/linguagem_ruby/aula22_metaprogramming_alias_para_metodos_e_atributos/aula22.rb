@@ -24,4 +24,18 @@ module Aula22
       "olá sobrescrito - #{super}"
     end
   end
+
+  # classe exemplo do uso alias
+  class ClasseTeste4 < ClasseTeste1
+    alias_method :ola_original, :ola
+
+    def ola
+      'olá sobrescrito'
+    end
+
+    def todos
+      "#{ola_original} ------------- #{ola}"
+      # send('ola_original') + ' ------------- ' + ola # mais dinâmico
+    end
+  end
 end
