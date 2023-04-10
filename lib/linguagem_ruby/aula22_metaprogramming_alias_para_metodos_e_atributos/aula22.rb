@@ -38,4 +38,16 @@ module Aula22
       # send('ola_original') + ' ------------- ' + ola # mais dinâmico
     end
   end
+
+  def overwrite(nome)
+    alias_method "#{nome}_original", nome
+
+    define_method(nome) do
+      'método redefinido do módulo'
+    end
+
+    define_method('todos') do
+      send(nome) + '---------' + send("#{nome}_original")
+    end
+  end
 end
