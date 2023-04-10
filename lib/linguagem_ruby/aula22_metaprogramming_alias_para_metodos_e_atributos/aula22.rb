@@ -56,4 +56,22 @@ module Aula22
     extend Aula22
     overwrite :ola
   end
+
+  def overwrite2(nome, &bloco)
+    alias_method "#{nome}_original", nome
+
+    define_method(nome, &bloco)
+
+    define_method('todos') do
+      send(nome) + '---------' + send("#{nome}_original")
+    end
+  end
+
+  # classe de teste 6
+  class ClasseTeste6 < ClasseTeste1
+    extend Aula22
+    overwrite :ola do
+      'método redefinido na classe 6'
+    end
+  end
 end
