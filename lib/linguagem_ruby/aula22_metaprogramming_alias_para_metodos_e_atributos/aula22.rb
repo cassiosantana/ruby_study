@@ -16,4 +16,12 @@ module Aula22
       'olá sobrescrito'
     end
   end
+
+  # classe exemplo herança com sobrescrição de método
+  class ClasseTeste3 < ClasseTeste1
+    # sobrescrevendo desta forma perde-se o método original
+    def ola
+      "olá sobrescrito - #{super}"
+    end
+  end
 end
