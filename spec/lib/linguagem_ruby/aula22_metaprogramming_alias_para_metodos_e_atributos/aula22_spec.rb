@@ -27,4 +27,13 @@ RSpec.describe Aula22 do
     expect(resultado2).to eq('olha original')
     expect(resultado3).to eq('método redefinido do módulo---------olha original')
   end
+
+  it 'Sobrescrito método utilizando módulo de forma mais genérica' do
+    resultado1 = Aula22::ClasseTeste6.new.ola
+    resultado2 = Aula22::ClasseTeste6.new.ola_original
+    resultado3 = Aula22::ClasseTeste6.new.todos
+    expect(resultado1).to eq('método redefinido do módulo')
+    expect(resultado2).to eq('olha original')
+    expect(resultado3).to eq('método redefinido do módulo---------olha original')
+  end
 end
