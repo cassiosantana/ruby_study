@@ -50,4 +50,10 @@ module Aula22
       send(nome) + '---------' + send("#{nome}_original")
     end
   end
+
+  # classe de teste 5
+  class ClasseTeste5 < ClasseTeste1
+    extend Aula22
+    overwrite :ola
+  end
 end
