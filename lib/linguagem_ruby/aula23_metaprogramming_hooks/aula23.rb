@@ -10,3 +10,11 @@ module Aula23
     puts "Teste extended: modulo: #{self}, extendido em #{classe}"
   end
 end
+
+class ClasseTeste1
+  include Aula23
+end
+
+class ClasseTeste2
+  extend Aula23
+end
