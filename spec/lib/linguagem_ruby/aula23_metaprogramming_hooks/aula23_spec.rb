@@ -10,4 +10,9 @@ RSpec.describe Aula23 do
     expect(resultado.length).to eq(3)
     expect(nome1).to eq('Cassio')
   end
+
+  it 'Retornar array com os nomes de classes' do
+    nomes = Pai.lista_de_classes.map { |f| f.new.mostre_o_nome }
+    expect(nomes).to eq(%w[Cassio Roger Santana])
+  end
 end
