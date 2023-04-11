@@ -40,3 +40,21 @@ class Pai
     @classes
   end
 end
+
+class Filha1 < Pai
+  def mostre_o_nome
+    'Cassio'
+  end
+end
+
+class Filha2 < Pai
+  def mostre_o_nome
+    'Roger'
+  end
+end
+
+class Filha3 < Pai
+  def mostre_o_nome
+    'Santana'
+  end
+end
