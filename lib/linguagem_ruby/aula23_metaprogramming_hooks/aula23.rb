@@ -24,3 +24,6 @@ class ClasseTestePai
     puts "Teste inherited: A classe #{classe} herda de #{self} "
   end
 end
+
+class ClasseTesteFilho < ClasseTestePai
+end
