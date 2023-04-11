@@ -18,3 +18,9 @@ end
 class ClasseTeste2
   extend Aula23
 end
+
+class ClasseTestePai
+  def self.inherited(classe)
+    puts "Teste inherited: A classe #{classe} herda de #{self} "
+  end
+end
