@@ -1,1 +1,12 @@
 # frozen_string_literal: true
+
+# módulo da aula 23
+module Aula23
+  def self.included(classe)
+    puts "Teste included: modulo: #{self}, incluido em #{classe}"
+  end
+
+  def self.extended(classe)
+    puts "Teste extended: modulo: #{self}, extendido em #{classe}"
+  end
+end
