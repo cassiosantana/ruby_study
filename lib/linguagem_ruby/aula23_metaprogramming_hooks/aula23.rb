@@ -27,3 +27,16 @@ end
 
 class ClasseTesteFilho < ClasseTestePai
 end
+
+# mais exemplos de inherited
+class Pai
+  def self.inherited(classe)
+    puts "A classe #{classe} herda de #{self}"
+    @classes ||= []
+    @classes << classe
+  end
+
+  def self.lista_de_classes
+    @classes
+  end
+end
