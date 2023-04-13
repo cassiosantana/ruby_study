@@ -15,4 +15,8 @@ RSpec.describe 'Aula24.1' do
   it 'Método de classe não existe' do
     expect(ClasseTeste2.metodo1).to eq('Método de classe metodo1 não existe')
   end
+
+  it 'Método de instância não existe' do
+    expect(ClasseTeste3.new.metodo2).to eq('Método de instância metodo2 não existe')
+  end
 end
