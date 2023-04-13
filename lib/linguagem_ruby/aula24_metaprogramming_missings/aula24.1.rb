@@ -13,3 +13,10 @@ class ClasseTeste2
     "Método de classe #{nome} não existe"
   end
 end
+
+# Classe para teste 3
+class ClasseTeste3
+  def method_missing(nome)
+    "Método de instância #{nome} não existe"
+  end
+end
