@@ -19,4 +19,9 @@ RSpec.describe 'Aula24.1' do
   it 'Método de instância não existe' do
     expect(ClasseTeste3.new.metodo2).to eq('Método de instância metodo2 não existe')
   end
+
+  it 'Verifica se campo existe no arquivo' do
+    expect(ClasseTeste4.new.nome1).to eq('Campo nome1 não existe')
+    expect(ClasseTeste4.new.nome).to eq('Campo existe')
+  end
 end
