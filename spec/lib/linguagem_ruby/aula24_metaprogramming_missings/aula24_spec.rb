@@ -3,7 +3,5 @@
 require 'spec_helper'
 require 'linguagem_ruby/aula24_metaprogramming_missings/aula24'
 
-RSpec.describe Aula24 do
-  it '' do
-  end
+RSpec.describe 'Aula24' do
 end
