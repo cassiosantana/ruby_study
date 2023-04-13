@@ -17,15 +17,29 @@ end
 
 # Cassio
 
-# Cria classe caso não exista
+# # Cria classe caso não exista
+# class Module
+#   def const_missing(nome)
+#     existe = File.exist?("lib/linguagem_ruby/aula24_metaprogramming_missings/#{nome}.csv")
+#     unless existe
+#       puts "Classe #{nome} não encontrada"
+#     end
+#     const_set(nome, Class.new) # retorna a classe
+#   end
+# end
+
+# Roger
+
+# Não entendi este código.
 class Module
-  def const_missing(nome)
+  old_const_missing = instance_method(:const_missing)
+  define_method(:const_missing) do |nome|
     existe = File.exist?("lib/linguagem_ruby/aula24_metaprogramming_missings/#{nome}.csv")
     unless existe
       puts "Classe #{nome} não encontrada"
+      return
     end
-    const_set(nome, Class.new) # retorna a classe
+    old_const_missing.bind(self).call(nome)
   end
 end
-
-Roger
+Cassio
