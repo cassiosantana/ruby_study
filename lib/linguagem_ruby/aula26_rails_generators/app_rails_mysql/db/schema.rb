@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_15_130311) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_16_120808) do
   create_table "carros", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "nome"
     t.string "marca"
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_15_130311) do
     t.integer "quantidade"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "ativo"
   end
 
 end
