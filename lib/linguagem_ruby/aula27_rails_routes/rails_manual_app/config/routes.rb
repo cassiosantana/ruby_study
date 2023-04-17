@@ -6,4 +6,7 @@ Rails.application.routes.draw do
 
   # rota para a página inicial da aplicação
   root 'home#index'
+
+  # rota para página sobre
+  get '/sobre', to: 'sobre#index'
 end
