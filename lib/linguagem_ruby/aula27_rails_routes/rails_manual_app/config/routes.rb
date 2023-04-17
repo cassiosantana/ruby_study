@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  # rota para a página inicial da aplicação
+  root 'home#index'
 end
