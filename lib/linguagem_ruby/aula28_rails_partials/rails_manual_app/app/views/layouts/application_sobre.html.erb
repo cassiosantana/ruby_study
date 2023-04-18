@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsManualApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body style="background: #9797c9">
+    <%# Passando parâmetros diretamente para o partials _header%>
+    <%= render 'layouts/header', topo: 'Aplicação para aprender Rails'%>
+    <%= yield %>
+    <%= render 'layouts/footer'%>
+  </body>
+</html>
