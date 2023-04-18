@@ -11,7 +11,8 @@
   </head>
 
   <body style="background: #9797c9">
-    <%= render 'layouts/header'%>
+    <%# Passando parâmetros diretamente para o partials _header%>
+    <%= render 'layouts/header', topo: 'Aplicação para aprender Rails'%>
     <%= yield %>
     <%= render 'layouts/footer'%>
   </body>

@@ -11,7 +11,8 @@
   </head>
 
   <body>
-    <%= render 'layouts/header'%>
+    <%# Passando parâmetros diretamente para o partials _header%>
+    <%= render 'layouts/header', topo: 'Olá, bem vindo a minha aplicação' %>
     <%= yield %>
     <%= render 'layouts/footer'%>
   </body>
