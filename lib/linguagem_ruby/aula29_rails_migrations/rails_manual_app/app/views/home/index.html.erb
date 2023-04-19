@@ -1,1 +1,10 @@
 <h1>Cássio Santana</h2>
+
+<ul>
+  <% @produtos.each do |produto| %>
+  <li>
+    <b>ID:</b> <%= produto.id %>
+    <b>NOME:</b> <%= produto.nome %>
+  </li>
+  <% end %>
+</ul>
