@@ -26,7 +26,7 @@ class HomeController < ApplicationController
     # produto.nome = 'Retrovisor direito'
     # produto.save
 
-    # atualização de prouto com active record | o mesmo método que adiciona também atualiza.
+    # atualização de produto com active record | o mesmo método que adiciona também atualiza.
     # precisamos adiconar ao método find o id do produto que queremos alterar.
     produto = Produto2.find(4)
     produto.nome = 'Retrovisor esquerdo'
