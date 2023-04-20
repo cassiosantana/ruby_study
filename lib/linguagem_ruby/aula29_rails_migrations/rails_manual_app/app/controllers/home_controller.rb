@@ -21,6 +21,11 @@ class HomeController < ApplicationController
     # buscar
     # @produtos = Produto.buscar
 
+    # adicionando produto com active record
+    produto = Produto2.new
+    produto.nome = 'Retrovisor direito'
+    produto.save
+
     # utilizando o comando do active record para buscar todos os dados do banco
     @produtos = Produto2.all
   end
