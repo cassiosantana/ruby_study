@@ -15,6 +15,10 @@ class Produto
     ActiveRecord::Base.connection.execute("UPDATE produtos1 SET nome= '#{self.nome}' WHERE id=#{self.id};")
   end
 
+  def excluir
+    ActiveRecord::Base.connection.execute("DELETE FROM produtos1 WHERE id=#{self.id};")
+  end
+
   def self.buscar
     produtos = ActiveRecord::Base.connection.exec_query('select * from produtos1')
     produtos.map { |p| Produto.new(p) }
