@@ -8,10 +8,15 @@ class HomeController < ApplicationController
     # produto.salvar
 
     # atualizar
+    # produto = Produto.new
+    # produto.id = 4
+    # produto.nome = 'Pneu dianteiro'
+    # produto.atualizar
+
+    # excluir
     produto = Produto.new
     produto.id = 4
-    produto.nome = 'Pneu dianteiro'
-    produto.atualizar
+    produto.excluir
 
     @produtos = Produto.buscar
   end
