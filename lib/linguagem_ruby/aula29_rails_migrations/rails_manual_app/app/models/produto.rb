@@ -11,6 +11,10 @@ class Produto
     ActiveRecord::Base.connection.execute("INSERT INTO produtos1 (nome) VALUES ('#{self.nome}');")
   end
 
+  def atualizar
+    ActiveRecord::Base.connection.execute("UPDATE produtos1 SET nome= '#{self.nome}' WHERE id=#{self.id};")
+  end
+
   def self.buscar
     produtos = ActiveRecord::Base.connection.exec_query('select * from produtos1')
     produtos.map { |p| Produto.new(p) }
