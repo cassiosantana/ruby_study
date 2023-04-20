@@ -14,10 +14,14 @@ class HomeController < ApplicationController
     # produto.atualizar
 
     # excluir
-    produto = Produto.new
-    produto.id = 4
-    produto.excluir
+    # produto = Produto.new
+    # produto.id = 4
+    # produto.excluir
 
-    @produtos = Produto.buscar
+    # buscar
+    # @produtos = Produto.buscar
+
+    # utilizando o comando do active record para buscar todos os dados do banco
+    @produtos = Produto2.all
   end
 end
