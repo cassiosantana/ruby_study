@@ -1,19 +1,16 @@
-<h1>Lista de Produtos</h1>
 <table>
-  <th>
-    <td>ID</td>
-    <td>NOME</td>
-    <td>DESCRIÇÃO</td>
-  <th>
-<table>
-
-<ul>
+  <tr>
+    <th>ID</th>
+    <th>NOME</th>
+    <th>DESCRIÇÃO</th>
+  <tr>
   <% @produtos.each do |produto| %>
-  <li>
-    <b>ID:</b> <%= produto.id %>
-    <b>NOME:</b> <%= produto.nome %>
-    <b>DESCRIÇÃO:</b> <%= produto.descricao %>
-  </li>
+  <tr>
+    <td><%= produto.id %></td>
+    <td><%= produto.nome %></td>
+    <td><%= produto.descricao %></td>
+    <td><a href="/produtos/<%= produto.id %>/alterar">Alterar</a></td>
+    <td><a href="/produtos/<%= produto.id %>/excluir">Excluir</a></td>
+  </tr>
   <% end %>
-</ul>
-<hr>
+<table>
