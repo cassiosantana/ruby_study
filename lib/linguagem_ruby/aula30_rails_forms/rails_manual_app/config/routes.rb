@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   # rota para página sobre
   get '/sobre', to: 'sobre#index'
+
+  get '/produtos', to: 'produtos#index'
 end
