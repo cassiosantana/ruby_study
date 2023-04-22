@@ -27,6 +27,13 @@ class ProdutosController < ApplicationController
     redirect_to '/produtos'
   end
 
+  def excluir
+    produto = Produto2.find(params[:id])
+    produto.destroy
+
+    redirect_to '/produtos'
+  end
+
   private
 
   def carregar_produtos
