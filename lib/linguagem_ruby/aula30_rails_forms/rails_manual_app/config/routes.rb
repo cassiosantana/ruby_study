@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get '/sobre', to: 'sobre#index'
 
   get '/produtos', to: 'produtos#index'
+
+  post '/produto/incluir', to: 'produtos#incluir'
 end
