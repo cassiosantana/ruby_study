@@ -28,9 +28,9 @@ class HomeController < ApplicationController
 
     # atualização de produto com active record | o mesmo método que adiciona também atualiza.
     # precisamos adiconar ao método find o id do produto que queremos alterar.
-    produto = Produto2.find(4)
-    produto.nome = 'Retrovisor esquerdo'
-    produto.save
+    # produto = Produto2.find(4)
+    # produto.nome = 'Retrovisor esquerdo'
+    # produto.save
 
     # utilizando o comando do active record para buscar todos os dados do banco
     @produtos = Produto2.all
