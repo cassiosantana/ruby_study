@@ -17,4 +17,10 @@ class ProdutosController < ApplicationController
     @produto = Produto2.find(params[:id])
     render :index
   end
+
+  private
+
+  def carregar_produtos
+    @produtos = Produto2.all
+  end
 end
