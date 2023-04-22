@@ -12,4 +12,9 @@ class ProdutosController < ApplicationController
 
     redirect_to '/produtos'
   end
+
+  def alterar
+    @produto = Produto2.find(params[:id])
+    render :index
+  end
 end
