@@ -18,6 +18,15 @@ class ProdutosController < ApplicationController
     render :index
   end
 
+  def salvar
+    produto = Produto2.find(params[:id])
+    produto.nome = params[:nome]
+    produto.descricao = params[:descricao]
+    produto.save
+
+    redirect_to '/produtos'
+  end
+
   private
 
   def carregar_produtos
