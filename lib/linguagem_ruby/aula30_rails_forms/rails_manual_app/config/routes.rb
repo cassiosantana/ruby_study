@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   get '/produto/:id/alterar', to: 'produtos#alterar'
 
   post '/produto/:id/salvar', to: 'produtos#salvar'
+
+  get '/produto/:id/excluir', to: 'produtos#excluir'
 end
