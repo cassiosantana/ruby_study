@@ -1,0 +1,64 @@
+<style>
+  table {
+    border: 1px solid #ccc;
+  }
+    table tr th {
+    border: 1px solid #ccc;
+  }
+
+  table tr td {
+    border: 1px solid #ccc;
+  }
+
+  textarea {
+    width: 200px;
+    height: 100px;
+  }
+</style>
+
+<fieldset>
+  <legend>Cadastro</legend>
+    <%
+      rota = "/produto/incluir"
+      nome = ""
+      descricao = ""
+      if @produto.present?
+        rota = "/produto/#{@produto.id}/salvar"
+        nome = @produto.nome
+        descricao = @produto.descricao
+      end
+    %>
+    <form action="<%= rota %>" method="post">
+    <div>
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" value="<%= nome %>" name="nome">
+    </div>
+    <div>
+      <label for="descricao">Descrição</label>
+    </div>
+    <div>
+      <textarea type="text" id="descricao" name="descricao"><%= descricao %></textarea>
+    </div>
+    
+    <div>
+      <input type="submit" value="Enviar">
+    </div>
+  </form>
+</fieldset>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>NOME</th>
+    <th>DESCRIÇÃO</th>
+  <tr>
+  <% @produtos.each do |produto| %>
+  <tr>
+    <td><%= produto.id %></td>
+    <td><%= produto.nome %></td>
+    <td><%= produto.descricao %></td>
+    <td><a href="/produto/<%= produto.id %>/alterar">Alterar</a></td>
+    <td><a href="/produto/<%= produto.id %>/excluir">Excluir</a></td>
+  </tr>
+  <% end %>
+<table>
