@@ -18,26 +18,16 @@
 
 <fieldset>
   <legend>Cadastro</legend>
-    <%
-      rota = "/produto/incluir"
-      nome = ""
-      descricao = ""
-      if @produto.present?
-        rota = "/produto/#{@produto.id}/salvar"
-        nome = @produto.nome
-        descricao = @produto.descricao
-      end
-    %>
     <form action="<%= rota %>" method="post">
     <div>
       <label for="nome">Nome</label>
-      <input type="text" id="nome" value="<%= nome %>" name="nome">
+      <input type="text" id="nome" value="<%= @nome %>" name="nome">
     </div>
     <div>
       <label for="descricao">Descrição</label>
     </div>
     <div>
-      <textarea type="text" id="descricao" name="descricao"><%= descricao %></textarea>
+      <textarea type="text" id="descricao" name="descricao"><%= @descricao %></textarea>
     </div>
     
     <div>
@@ -61,4 +51,4 @@
     <td><a href="/produto/<%= produto.id %>/excluir">Excluir</a></td>
   </tr>
   <% end %>
-<table>
+</table>
