@@ -70,4 +70,14 @@ RSpec.describe Weapon, type: :model do
       end
     end
   end
+
+  describe 'Weapon Attributes' do
+    let(:weapon) { build(:weapon) }
+
+    context 'Weapon title' do
+      it 'Follows the default title set' do
+        expect(weapon.title).to eq("#{weapon.name} ##{weapon.level}")
+      end
+    end
+  end
 end
