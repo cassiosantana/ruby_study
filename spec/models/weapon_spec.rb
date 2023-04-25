@@ -15,4 +15,14 @@ RSpec.describe Weapon, type: :model do
       end
     end
   end
+
+  describe 'Weapon power base' do
+    let(:power_base_above) { build(:weapon, power_base: FFaker::Random.rand(3001..10000)) }
+
+    context 'Invalid power base' do
+      it 'Power base value above allowed' do
+        expect(power_base_above).to_not be_valid
+      end
+    end
+  end
 end
