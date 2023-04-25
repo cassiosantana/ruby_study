@@ -45,4 +45,14 @@ RSpec.describe Weapon, type: :model do
       end
     end
   end
+
+  describe 'Weapon name' do
+    let(:weapon_name_nil) { build(:weapon, name: nil) }
+
+    context 'Invalid weapon name' do
+      it 'Null weapon name' do
+        expect(weapon_name_nil).to_not be_valid
+      end
+    end
+  end
 end
