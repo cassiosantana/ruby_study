@@ -19,4 +19,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_13_154828) do
     t.integer "level"
   end
 
+  create_table "weapons", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "power_base"
+    t.integer "power_step"
+    t.integer "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
