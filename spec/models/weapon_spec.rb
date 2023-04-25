@@ -60,4 +60,14 @@ RSpec.describe Weapon, type: :model do
       end
     end
   end
+
+  describe 'Weapon power' do
+    let(:weapon) { build(:weapon) }
+
+    context 'Current power' do
+      it 'Does not exceed power limit' do
+        expect(weapon).to be_valid
+      end
+    end
+  end
 end
