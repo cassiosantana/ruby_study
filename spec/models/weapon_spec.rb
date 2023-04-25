@@ -33,10 +33,15 @@ RSpec.describe Weapon, type: :model do
 
   describe 'Weapon power step' do
     let(:power_step_above) { build(:weapon, power_step: FFaker::Random.rand(101..1000)) }
+    let(:power_step_below) { build(:weapon, power_step: FFaker::Random.rand(-1000..99)) }
 
     context 'Invalid power step' do
       it 'Power step value above allowed' do
         expect(power_step_above).to_not be_valid
+      end
+
+      it 'Power step value above below' do
+        expect(power_step_below).to_not be_valid
       end
     end
   end
