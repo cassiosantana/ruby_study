@@ -5,8 +5,10 @@ namespace :apagar_dados do
     puts '############# Apagado produto de id 9 #############'
   end
 
-  desc "TODO"
-  task tabela_produto1: :environment do
+  desc "Apagar o ultimo produto da tabela produto2"
+  task apagar_ultimo: :environment do
+    Produto2.last.destroy
+    puts '############# Apagado ultimo produto adicionado #############'
   end
 
 end
