@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Produto2.new(nome: 'Cadeira Gamer', descricao: 'Cadeira muito conformável e linda').save
