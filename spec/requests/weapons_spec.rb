@@ -8,6 +8,18 @@ RSpec.describe "Weapons", type: :request do
     end
   end
 
+  describe "Weapons attributes" do
+    context 'Present attributes' do
+      it "the weapon name is present" do
+        weapons = create_list(:weapon, 3)
+        get weapons_path
+        weapons.each do |weapon|
+          expect(response.body).to include(weapon.name)
+        end
+      end
+    end
+  end
+
   describe "GET /create" do
     it "returns http success" do
       get "/weapons/create"
