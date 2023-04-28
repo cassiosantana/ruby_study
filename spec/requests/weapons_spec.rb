@@ -25,6 +25,14 @@ RSpec.describe "Weapons", type: :request do
           expect(response.body).to include("#{ weapon.current_power }")
         end
       end
+
+      it "the weapon title is present" do
+        weapons = create_list(:weapon, 3)
+        get weapons_path
+        weapons.each do |weapon|
+          expect(response.body).to include(weapon.title)
+        end
+      end
     end
   end
 
