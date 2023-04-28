@@ -21,6 +21,6 @@ produto.save!
 # > validation failed: Nome can't be blank
 
 # Resumo:
-#   - bang: Atualiza a referência e se erro causa um raise;
+# - bang: Atualiza a referência e se erro causa um raise;
 # - sem nada: retorna algum elemento;
 # - interrogação: retorna booleano.
