@@ -2,6 +2,9 @@ class ProdutosController < ApplicationController
   before_action :carregar_produtos, except: [:incluir, :salvar]
 
   def index
+    # # Renderizando os produtos em json
+    render json: @produtos, status: 200
+
   end
 
   def incluir
