@@ -3,7 +3,13 @@ class ProdutosController < ApplicationController
 
   def index
     # # Renderizando os produtos em json
-    render json: @produtos, status: 200
+    # render json: @produtos, status: 200
+
+    respond_to do |format|
+      format.html { render show: @produtos, status: 200 }
+      format.json { render json: @produtos, status: 200 }
+      format.xml { render xml: @produtos, status: 200 }
+    end
 
   end
 
