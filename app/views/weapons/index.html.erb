@@ -2,7 +2,8 @@
 <p>Find me in app/views/weapons/index.html.erb</p>
 
 <%= @weapons.each do |weapon| %>
-  <%= weapon.title %>
+  <%= weapon.name %>
   <%= weapon.current_power %>
   <%= weapon.title %>
+  <%= link_to 'Show', weapon %>
 <% end %>
