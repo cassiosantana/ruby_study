@@ -34,6 +34,16 @@ RSpec.describe "Weapons", type: :request do
         end
       end
     end
+
+    context 'show weapon link' do
+      it 'weapon link is present' do
+        weapons = create_list(:weapon, 10)
+        get weapons_path
+        weapons.each do |weapon|
+          expect(response.body).to include("/weapons/#{ weapon.id }")
+        end
+      end
+    end
   end
 
   describe "GET /create" do
