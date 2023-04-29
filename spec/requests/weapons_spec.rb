@@ -38,4 +38,13 @@ RSpec.describe "Weapons", type: :request do
       end
     end
   end
+
+  describe "POST /create" do
+    it '' do
+      weapon_attributes = FactoryBot.attributes_for(:weapon)
+      post weapons_path, params: { weapon: weapon_attributes }
+      # checks if the last user sent in the post has the same attributes that were created before the post
+      expect(Weapon.last).to have_attributes(weapon_attributes)
+    end
+  end
 end
