@@ -48,5 +48,19 @@ RSpec.describe "Weapons", type: :request do
         expect(Weapon.last).to have_attributes(weapon_attributes)
       end
     end
+
+    context 'when parameters are incorrect' do
+      it 'uncreated weapon' do
+        # checks if by making a post with invalid values the weapon count has changed
+        expect {
+          post weapons_path, params: { weapon: {
+            name: FFaker::Name.name,
+            description: FFaker::Lorem.paragraph(1),
+            power_base: 3000,
+            power_step: 100,
+            level: FFaker::Random.rand(100..9999)
+          }}}.to_not change(Weapon, :count)
+      end
+    end
   end
 end
