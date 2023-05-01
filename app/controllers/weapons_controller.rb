@@ -14,6 +14,7 @@ class WeaponsController < ApplicationController
   end
 
   def show
+    @weapon = Weapon.find(params[:id])
   end
 
   private
