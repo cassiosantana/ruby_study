@@ -48,4 +48,16 @@ module Lesson03
       $number1
     end
   end
+
+  class Constant
+    NUMBER1 = 5
+
+    def instance_method
+      NUMBER1
+    end
+
+    def self.class_method
+      NUMBER1
+    end
+  end
 end
