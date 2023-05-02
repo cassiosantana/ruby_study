@@ -38,4 +38,14 @@ module Lesson03
       @@number1
     end
   end
+
+  class GlobalVariable
+    attr_reader :number1
+
+
+    $number1 = 4
+    def self.class_method
+      $number1
+    end
+  end
 end
