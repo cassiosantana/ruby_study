@@ -28,4 +28,14 @@ module Lesson03
       @number2
     end
   end
+
+  class ClassVariable
+    attr_reader :number1
+    # class_variables do not need to be initialized to be visible
+    @@number1 = 1
+
+    def self.class_method
+      @@number1
+    end
+  end
 end
