@@ -92,5 +92,23 @@ RSpec.describe LinguagemRuby do
       end
     end
   end
+
+  describe 'Global variable' do
+    context 'visible' do
+      let(:visible) { Lesson03::GlobalVariable.class_method }
+
+      it 'class method' do
+        expect(visible).to_not be_nil
+      end
+    end
+
+    context 'not visible' do
+      let(:not_visible) { Lesson03::GlobalVariable.new.number1 }
+
+      it 'instance method' do
+        expect(not_visible).to be_nil
+      end
+    end
+  end
 end
 
