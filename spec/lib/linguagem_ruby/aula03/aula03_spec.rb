@@ -77,5 +77,20 @@ RSpec.describe LinguagemRuby do
       end
     end
   end
+
+  describe 'Class variable' do
+    context 'visible' do
+      let(:visible1) { Lesson03::ClassVariable.class_method }
+      let(:visible2) { Lesson03::InstanceVariable.new.number1 }
+
+      it 'class method' do
+        expect(visible1).to_not be_nil
+      end
+
+      it 'instance method' do
+        expect(visible2).to_not be_nil
+      end
+    end
+  end
 end
 
