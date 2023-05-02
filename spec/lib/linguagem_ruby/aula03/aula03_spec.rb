@@ -110,5 +110,19 @@ RSpec.describe LinguagemRuby do
       end
     end
   end
+
+  describe 'Constant' do
+    context 'visible' do
+      let(:visible) { Lesson03::Constant.new.instance_method }
+
+      it 'instance method' do
+        expect(visible).to_not be_nil
+      end
+
+      it 'class method' do
+        expect(Lesson03::Constant.class_method).to_not be_nil
+      end
+    end
+  end
 end
 
