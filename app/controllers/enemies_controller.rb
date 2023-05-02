@@ -8,6 +8,10 @@ class EnemiesController < ApplicationController
 
   private
 
+  def enemy_params
+    params.permit(:name, :power_base, :power_tep, :level, :kind)
+  end
+
   def set_enemies
     @enemy = Enemy.find(params[:id])
   rescue ActiveRecord::RecordNotFound => e
