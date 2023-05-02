@@ -14,4 +14,18 @@ module Lesson03
       obj.class.superclass.superclass
     end
   end
+
+  class InstanceVariable
+    attr_reader :number1, :number2
+    # to be externally visible the instance variable needs to be initialized
+    @number2 = 2
+
+    def initialize
+      @number1 = 1
+    end
+
+    def self.class_method
+      @number2
+    end
+  end
 end
