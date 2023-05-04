@@ -30,4 +30,35 @@
     </table>
 </div>
 
+<h1>Carros BMW</h1>
+
+<div id="BMW">
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Marca</th>
+          <th>Ano</th>
+          <th>#</th>
+          <th>#</th>
+          <th>#</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @carros_bmw.each do |carro| %>
+        <tr>
+          <td><%= carro.nome %></td>
+          <td><%= carro.marca.nome %></td>
+          <td><%= carro.ano %></td>
+          <td><%= link_to "Show this carro", carro %></td>
+          <td><%= link_to "Edit this carro", edit_carro_path(carro) %></td>
+          <td><%= button_to "Destroy this carro", carro, method: :delete %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
+
+<hr>
 <%= link_to "New carro", new_carro_path %>

@@ -4,6 +4,7 @@ class CarrosController < ApplicationController
   # GET /carros or /carros.json
   def index
     @carros = Carro.all
+    @carros_bmw = Carro.order("nome asc").joins(:marca).where("marcas.nome = 'BMW'")
   end
 
   # GET /carros/1 or /carros/1.json
