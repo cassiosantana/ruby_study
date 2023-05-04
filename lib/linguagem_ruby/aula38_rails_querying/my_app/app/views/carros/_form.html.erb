@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :marca_id, style: "display: block" %>
-    <%= form.text_field :marca_id %>
+    <%= form.select(:marca_id, Marca.all.map { |m| [m.nome, m.id] }) %>
   </div>
 
   <div>
