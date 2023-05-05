@@ -1,3 +1,3 @@
 class Pedido < ApplicationRecord
-  has_many :item_pedidos
+  belongs_to :client
 end
