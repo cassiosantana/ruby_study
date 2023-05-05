@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :item_pedidos
   resources :pedidos
   resources :carros
   resources :marcas
