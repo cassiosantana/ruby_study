@@ -9,19 +9,22 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
+  <div class="topnav">
+    <div>
+      <%= link_to 'Carros', carros_path %>
+    </div>
+    <div>
+      <%= link_to 'Marcas', marcas_path %>
+    </div>
+    <div>
+      <%= link_to 'Pedidos', pedidos_path %>
+    </div>
+    <div>
+      <%= link_to 'Clientes', clients_path %>
+    </div>
+  </div>
 
   <body>
     <%= yield %>
   </body>
-
-  <hr>
-  <div>
-    <%= link_to 'Carros', carros_path %>
-  </div>
-  <div>
-    <%= link_to 'Marcas', marcas_path %>
-  </div>
-  <div>
-    <%= link_to 'Pedidos', pedidos_path %>
-  </div>
 </html>
