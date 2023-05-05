@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_05_100741) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_05_111010) do
   create_table "carros", force: :cascade do |t|
     t.string "nome"
     t.integer "marca_id", null: false
@@ -43,7 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_05_100741) do
   end
 
   create_table "pedidos", force: :cascade do |t|
-    t.integer "client_id"
+    t.integer "cliente_id"
     t.float "valor_total"
     t.string "status"
     t.datetime "created_at", null: false
