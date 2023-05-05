@@ -20,6 +20,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_05_100741) do
     t.index ["marca_id"], name: "index_carros_on_marca_id"
   end
 
+  create_table "clients", force: :cascade do |t|
+    t.string "nome"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "item_pedidos", force: :cascade do |t|
     t.integer "pedido_id", null: false
     t.integer "carro_id", null: false
