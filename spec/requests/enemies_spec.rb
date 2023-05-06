@@ -14,6 +14,11 @@ RSpec.describe "Enemies", type: :request do
       # verifica se de fato a versão mais recente do enemy no banco de
       # dados contém os mesmos atributos que passamos.
       it 'updates the record' do
+        enemy = create(:enemy)
+        enemy_attributes = attributes_for(:enemy)
+        put "/enemies/#{enemy.id}", params: enemy_attributes
+
+        expect(enemy.reload).to have_attributes(enemy_attributes)
       end
       it 'returns the enemy updated'
     end
