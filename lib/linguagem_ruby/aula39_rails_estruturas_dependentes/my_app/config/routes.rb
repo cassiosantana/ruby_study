@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :clients
-  resources :item_pedidos
-  resources :pedidos
+  resources :pedidos do
+    resources :item_pedidos
+  end
   resources :carros
   resources :marcas
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
