@@ -14,6 +14,7 @@
       <th>Cliente</th>
       <th>Valor</th>
       <th>Status</th>
+      <th>Itens</th>
       <th>#</th>
       <th>#</th>
       <th>#</th>
@@ -26,6 +27,7 @@
         <td><%= pedido.client.nome %></td>
         <td><%= pedido.valor_total %></td>
         <td><%= pedido.status %></td>
+        <td><%= link_to "Itens", pedido_item_pedidos_path(pedido) %></td>
         <td><%= link_to "Show this pedido", pedido %></td>
         <td><%= link_to "Edit this pedido", edit_pedido_path(pedido) %></td>
         <td><%= button_to "Destroy this pedido", pedido, method: :delete %></td>
