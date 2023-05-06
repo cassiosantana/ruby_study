@@ -11,7 +11,10 @@ RSpec.describe "Enemies", type: :request do
         expect(response).to have_http_status(200)
       end
 
-      it 'updates the record'
+      # verifica se de fato a versão mais recente do enemy no banco de
+      # dados contém os mesmos atributos que passamos.
+      it 'updates the record' do
+      end
       it 'returns the enemy updated'
     end
 
