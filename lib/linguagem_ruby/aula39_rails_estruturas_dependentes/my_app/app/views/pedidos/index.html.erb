@@ -1,14 +1,33 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Pedidos</h1>
+<h1>Todos os pedidos</h1>
 
 <div id="pedidos">
-  <% @pedidos.each do |pedido| %>
-    <%= render pedido %>
-    <p>
-      <%= link_to "Show this pedido", pedido %>
-    </p>
-  <% end %>
-</div>
+  <table>
+    <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Valor</th>
+      <th>Status</th>
+      <th>#</th>
+      <th>#</th>
+      <th>#</th>
+    </tr>
+    </thead>
 
+    <tbody>
+    <% @pedidos.each do |pedido| %>
+      <tr>
+        <td><%= pedido.client.nome %></td>
+        <td><%= pedido.valor_total %></td>
+        <td><%= pedido.status %></td>
+        <td><%= link_to "Show this pedido", pedido %></td>
+        <td><%= link_to "Edit this pedido", edit_pedido_path(pedido) %></td>
+        <td><%= button_to "Destroy this pedido", pedido, method: :delete %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+<hr>
 <%= link_to "New pedido", new_pedido_path %>
