@@ -1,6 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @pedido %>
+<dl>
+  <dt>Nome:</dt>
+  <dd><%= @pedido.client.nome %></dd>
+
+  <dt>Valor:</dt>
+  <dd><%= @pedido.valor_total %></dd>
+
+  <dt>Status:</dt>
+  <dd><%= @pedido.status %></dd>
+</dl>
 
 <div>
   <%= link_to "Edit this pedido", edit_pedido_path(@pedido) %> |
