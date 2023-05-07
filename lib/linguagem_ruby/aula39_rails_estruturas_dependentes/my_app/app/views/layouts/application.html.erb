@@ -9,6 +9,8 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <style>
+        nav { margin: 0; padding: 0;}
+        body { margin: 0; padding: 0; }
         /* Add a black background color to the top navigation */
         .topnav {
             background-color: #333;
@@ -37,6 +39,12 @@
             background-color: #04AA6D;
             color: white;
         }
+
+        .center {
+            max-width: 700px;
+            margin: auto;
+        }
+
     </style>
   </head>
   <div class="topnav">
@@ -55,6 +63,8 @@
   </div>
 
   <body>
-    <%= yield %>
+    <div class="center">
+      <%= yield %>
+    </div>
   </body>
 </html>
