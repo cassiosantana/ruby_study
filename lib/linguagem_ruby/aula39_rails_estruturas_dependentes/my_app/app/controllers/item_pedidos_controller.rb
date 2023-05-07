@@ -4,7 +4,7 @@ class ItemPedidosController < ApplicationController
 
   # GET /item_pedidos or /item_pedidos.json
   def index
-    @item_pedidos = ItemPedido.all
+    @item_pedidos = ItemPedido.where(pedido_id: @pedido.id)
   end
 
   # GET /item_pedidos/1 or /item_pedidos/1.json
