@@ -13,7 +13,8 @@
 
 <div>
   <%= link_to "Edit this pedido", edit_pedido_path(@pedido) %> |
-  <%= link_to "Back to pedidos", pedidos_path %>
+  <%= link_to "Back to pedidos", pedidos_path %> |
+  <%= link_to "Itens deste pedido", pedido_item_pedidos_path(@pedido) %>
 
   <%= button_to "Destroy this pedido", @pedido, method: :delete %>
 </div>
