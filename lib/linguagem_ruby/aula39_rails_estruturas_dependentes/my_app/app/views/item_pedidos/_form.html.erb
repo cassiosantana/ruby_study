@@ -12,13 +12,8 @@
   <% end %>
 
   <div>
-    <%= form.label :pedido_id, style: "display: block" %>
-    <%= form.text_field :pedido_id %>
-  </div>
-
-  <div>
     <%= form.label :carro_id, style: "display: block" %>
-    <%= form.text_field :carro_id %>
+    <%= form.select(:carro_id, Carro.all.map { |c| [c.nome, c.id] }) %>
   </div>
 
   <div>
