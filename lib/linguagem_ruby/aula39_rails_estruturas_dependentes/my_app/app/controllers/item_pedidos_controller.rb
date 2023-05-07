@@ -27,7 +27,7 @@ class ItemPedidosController < ApplicationController
 
     respond_to do |format|
       if @item_pedido.save
-        format.html { redirect_to item_pedido_url(@item_pedido), notice: "Item pedido was successfully created." }
+        format.html { redirect_to pedido_item_pedido_url(@pedido, @item_pedido), notice: "Item pedido was successfully created." }
         format.json { render :show, status: :created, location: @item_pedido }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +40,7 @@ class ItemPedidosController < ApplicationController
   def update
     respond_to do |format|
       if @item_pedido.update(item_pedido_params)
-        format.html { redirect_to item_pedido_url(@item_pedido), notice: "Item pedido was successfully updated." }
+        format.html { redirect_to pedido_item_pedido_url(@pedido, @item_pedido), notice: "Item pedido was successfully updated." }
         format.json { render :show, status: :ok, location: @item_pedido }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -54,7 +54,7 @@ class ItemPedidosController < ApplicationController
     @item_pedido.destroy
 
     respond_to do |format|
-      format.html { redirect_to item_pedidos_url, notice: "Item pedido was successfully destroyed." }
+      format.html { redirect_to pedido_item_pedidos_url, notice: "Item pedido was successfully destroyed." }
       format.json { head :no_content }
     end
   end
