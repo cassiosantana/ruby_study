@@ -3,8 +3,8 @@
 <%= render @item_pedido %>
 
 <div>
-  <%= link_to "Edit this item pedido", edit_item_pedido_path(@item_pedido) %> |
-  <%= link_to "Back to item pedidos", item_pedidos_path %>
+  <%= link_to "Edit this item pedido", edit_pedido_item_pedido_path(@pedido, @item_pedido) %> |
+  <%= link_to "Back to item pedidos", pedido_item_pedidos_path %>
 
-  <%= button_to "Destroy this item pedido", @item_pedido, method: :delete %>
+  <%= button_to "Destroy this item pedido", pedido_item_pedidos_path, method: :delete %>
 </div>
