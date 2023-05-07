@@ -1,5 +1,6 @@
 class ItemPedidosController < ApplicationController
   before_action :set_item_pedido, only: %i[ show edit update destroy ]
+  before_action :set_pedido
 
   # GET /item_pedidos or /item_pedidos.json
   def index
@@ -58,6 +59,9 @@ class ItemPedidosController < ApplicationController
   end
 
   private
+    def set_pedido
+      @pedido = Pedido.find(params[:pedido_id])
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_item_pedido
       @item_pedido = ItemPedido.find(params[:id])
