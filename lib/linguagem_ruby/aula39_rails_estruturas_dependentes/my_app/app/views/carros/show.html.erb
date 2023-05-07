@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<dl>
+  <dt>Nome: </dt>
+  <dd><%= @carro.nome %></dd>
+
+  <dt>Marca: </dt>
+  <dd><%= @carro.marca.nome %></dd>
+
+  <dt>Ano: </dt>
+  <dd><%= @carro.ano %></dd>
+</dl>
+
+<div>
+  <%= link_to "Edit this carro", edit_carro_path(@carro) %> |
+  <%= link_to "Back to carros", carros_path %>
+
+  <%= button_to "Destroy this carro", @carro, method: :delete %>
+</div>

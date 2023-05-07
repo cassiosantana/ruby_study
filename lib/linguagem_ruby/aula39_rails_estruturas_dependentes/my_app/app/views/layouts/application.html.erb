@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <style>
+        nav { margin: 0; padding: 0;}
+        body { margin: 0; padding: 0; }
+        /* Add a black background color to the top navigation */
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+            margin:0 auto;
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .center {
+            max-width: 700px;
+            margin: auto;
+        }
+
+    </style>
+  </head>
+  <div class="topnav">
+    <div>
+      <%= link_to 'Carros', carros_path %>
+    </div>
+    <div>
+      <%= link_to 'Marcas', marcas_path %>
+    </div>
+    <div>
+      <%= link_to 'Pedidos', pedidos_path %>
+    </div>
+    <div>
+      <%= link_to 'Clientes', clients_path %>
+    </div>
+  </div>
+
+  <body>
+    <div class="center">
+      <%= yield %>
+    </div>
+  </body>
+</html>
