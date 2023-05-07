@@ -6,7 +6,10 @@
   <% @item_pedidos.each do |item_pedido| %>
     <%= render item_pedido %>
     <p>
-      <%= link_to "Show this item pedido", pedido_item_pedido_path(@pedido, item_pedido) %>
+      <%= link_to "Show this item pedido", pedido_item_pedido_path(@pedido, item_pedido) %> |
+      <%= link_to "Edit this item pedido", edit_pedido_item_pedido_path(@pedido, item_pedido) %> |
+      <%= button_to 'Destroy', pedido_item_pedido_path(@pedido, item_pedido), method: :delete, data: { confirm: 'Are you sure?' } %>
+
     </p>
   <% end %>
 </div>
