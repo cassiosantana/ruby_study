@@ -23,6 +23,7 @@ class ItemPedidosController < ApplicationController
   # POST /item_pedidos or /item_pedidos.json
   def create
     @item_pedido = ItemPedido.new(item_pedido_params)
+    @item_pedido.pedido = @pedido
 
     respond_to do |format|
       if @item_pedido.save
