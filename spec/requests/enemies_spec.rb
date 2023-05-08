@@ -35,6 +35,7 @@ RSpec.describe "Enemies", type: :request do
 
     context 'when the enemy does not exist' do
       it 'returns status code 404' do
+        # enviando parâmetros para um inimigo inexistente | id 0 não existe
         put '/enemies/0', params: attributes_for(:enemy)
         expect(response).to have_http_status(404)
       end
