@@ -45,4 +45,7 @@ RSpec.describe "Enemies", type: :request do
       end
     end
   end
+
+  describe 'DELETE /enemies' do
+  end
 end
