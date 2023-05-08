@@ -60,6 +60,7 @@ RSpec.describe "Enemies", type: :request do
         # utiliza um helper para representar a rota do enemy igual ao teste anterior
         delete enemy_path(enemy)
 
+        # o enemy.reload lança um erro caso o inimigo não exista
         expect { enemy.reload }.to raise_error ActiveRecord::RecordNotFound
       end
     end
