@@ -57,7 +57,8 @@ RSpec.describe "Enemies", type: :request do
 
       it 'destroy the record' do
         enemy = create(:enemy)
-        delete "/enemies/#{enemy.id}"
+        # utiliza um helper para representar a rota do enemy igual ao teste anterior
+        delete enemy_path(enemy)
 
         expect { enemy.reload }.to raise_error ActiveRecord::RecordNotFound
       end
