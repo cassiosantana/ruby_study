@@ -64,5 +64,8 @@ RSpec.describe "Enemies", type: :request do
         expect { enemy.reload }.to raise_error ActiveRecord::RecordNotFound
       end
     end
+
+    context 'when the enemy does not exist' do
+    end
   end
 end
