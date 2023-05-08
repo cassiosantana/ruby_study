@@ -16,7 +16,7 @@ class EnemiesController < ApplicationController
   private
 
   def enemy_params
-    params.permit(:name, :power_base, :power_tep, :level, :kind)
+    params.permit(:name, :power_base, :power_step, :level, :kind)
   end
 
   def set_enemies
