@@ -66,6 +66,11 @@ RSpec.describe "Enemies", type: :request do
     end
 
     context 'when the enemy does not exist' do
+      it 'return status code 404' do
+        delete '/enemies/0'
+
+        expect(response).to have_http_status(404)
+      end
     end
   end
 end
