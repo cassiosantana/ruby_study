@@ -35,19 +35,14 @@ RSpec.describe "Enemies", type: :request do
 
   describe 'DELETE /enemies' do
     context 'when the enemy exists' do
-      it 'return status code 204' do
-        enemy = create(:enemy)
-        delete "/enemies/#{enemy.id}"
+      let(:enemy) { create(:enemy) }
+      before(:each) { delete "/enemies/#{enemy.id}" }
 
+      it 'return status code 204' do
         expect(response).to have_http_status(204)
       end
 
       it 'destroy the record' do
-        enemy = create(:enemy)
-        # utiliza um helper para representar a rota do enemy igual ao teste anterior
-        delete enemy_path(enemy)
-
-        # o enemy.reload lança um erro caso o inimigo não exista
         expect { enemy.reload }.to raise_error ActiveRecord::RecordNotFound
       end
     end
