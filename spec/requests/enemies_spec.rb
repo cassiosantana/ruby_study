@@ -26,10 +26,8 @@ RSpec.describe "Enemies", type: :request do
         enemy_attributes = attributes_for(:enemy)
         put "/enemies/#{enemy.id}", params: enemy_attributes
 
-        # JSON.parse converte os dados da resposta de jon para um hash
-        json_response = JSON.parse(response.body)
-        # ignora os atributos de data de criação e atualização
-        expect(enemy.reload).to have_attributes(json_response.except('created_at', 'updated_at'))
+        # ignora os atributos de data de criação e atualização e utiliza o helper JsonHelpers
+        expect(enemy.reload).to have_attributes(json.except('created_at', 'updated_at'))
       end
     end
 
