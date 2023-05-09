@@ -1,3 +1,8 @@
+PATH
+  remote: vendor/gems/format_string
+  specs:
+    format_string (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -212,6 +217,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  format_string!
   importmap-rails
   jbuilder
   puma (~> 5.0)
