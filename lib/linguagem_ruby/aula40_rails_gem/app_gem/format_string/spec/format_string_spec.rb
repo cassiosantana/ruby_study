@@ -5,7 +5,11 @@ RSpec.describe FormatString do
     expect(FormatString::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "test formatting in real" do
+    expect(FormatString::Moeda.br(2)).to eq('R$2')
+  end
+
+  it "test formatting in dolar" do
+    expect(FormatString::Moeda.us(2)).to eq('$2')
   end
 end
