@@ -21,13 +21,13 @@ RSpec.describe "Enemies", type: :request do
     end
 
     context 'when the enemy does not exist' do
+      before(:each) { put '/enemies/0', params: attributes_for(:enemy) }
+
       it 'returns status code 404' do
-        # enviando parâmetros para um inimigo inexistente | id 0 não existe
-        put '/enemies/0', params: attributes_for(:enemy)
         expect(response).to have_http_status(404)
       end
+
       it 'returns a not found message' do
-        put '/enemies/0', params: attributes_for(:enemy)
         expect(response.body).to match(/Couldn't find Enemy/)
       end
     end
