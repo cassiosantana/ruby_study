@@ -48,15 +48,13 @@ RSpec.describe "Enemies", type: :request do
     end
 
     context 'when the enemy does not exist' do
-      it 'return status code 404' do
-        delete '/enemies/0'
+      before(:each) { delete '/enemies/0' }
 
+      it 'return status code 404' do
         expect(response).to have_http_status(404)
       end
 
       it 'returns a not found message' do
-        delete enemy_path(0)
-
         expect(response.body).to match(/Couldn't find Enemy/)
       end
     end
