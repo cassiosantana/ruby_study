@@ -270,3 +270,222 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 3ms (Views: 2.7ms | Allocations: 2929)
 
 
+Started GET "/" for 127.0.0.1 at 2023-05-10 06:11:28 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 490)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 37301)
+Completed 200 OK in 49ms (Views: 44.2ms | ActiveRecord: 0.0ms | Allocations: 43394)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:11:46 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2989)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 3391)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:17:07 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 14837)
+Completed 200 OK in 14ms (Views: 12.9ms | Allocations: 15855)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:17:08 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2827)
+Completed 200 OK in 4ms (Views: 3.7ms | Allocations: 3179)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:17:09 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2823)
+Completed 200 OK in 3ms (Views: 2.3ms | Allocations: 3151)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:17:09 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2818)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 3150)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:18:11 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 15143)
+Completed 200 OK in 10ms (Views: 9.3ms | Allocations: 16475)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:18:51 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 3497)
+Completed 200 OK in 4ms (Views: 3.7ms | Allocations: 4645)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:19:04 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2823)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 3173)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:19:05 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2829)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 3159)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:19:05 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2808)
+Completed 200 OK in 4ms (Views: 3.9ms | Allocations: 3138)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:19:05 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2844)
+Completed 200 OK in 3ms (Views: 3.0ms | Allocations: 3174)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:19:06 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2820)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 3150)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:19:06 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2808)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 3138)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:19:06 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2814)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 3144)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:19:06 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2802)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 3133)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:19:06 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2811)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 3142)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:19:07 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2811)
+Completed 200 OK in 3ms (Views: 2.3ms | Allocations: 3141)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:19:07 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2817)
+Completed 200 OK in 6ms (Views: 5.7ms | Allocations: 3148)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:19:07 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2799)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 3129)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:19:07 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2820)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 3150)
+
+
+Started GET "/?moeda=1000" for 127.0.0.1 at 2023-05-10 06:25:26 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"moeda"=>"1000"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 3537)
+Completed 200 OK in 4ms (Views: 3.7ms | Allocations: 4673)
+
+
