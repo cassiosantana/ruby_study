@@ -10,8 +10,8 @@ class ClienteTest < ActionDispatch::IntegrationTest
     cliente = Cliente.new
 
     #verifica se cada método passado como parâmetro está respondendo como deveria e retorna um booleano
-    campos = cliente.respond_to?(:nome) && cliente.respond_to?(:telefone) && cliente.respond_to?(:cpf)
-
-    assert campos
+    assert cliente.respond_to?(:nome)
+    assert cliente.respond_to?(:telefone)
+    assert cliente.respond_to?(:cpf)
   end
 end
