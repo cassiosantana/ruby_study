@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe CachorroController, type: :request do
+RSpec.describe CachorrosController, type: :request do
   describe "GET /index" do
     it 'ter a variavel de classe @cachorros' do
       Cachorro.destroy_all
