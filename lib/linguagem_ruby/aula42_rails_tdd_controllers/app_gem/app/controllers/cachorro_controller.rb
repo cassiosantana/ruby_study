@@ -1,0 +1,2 @@
+class CachorroController < ApplicationController
+end
