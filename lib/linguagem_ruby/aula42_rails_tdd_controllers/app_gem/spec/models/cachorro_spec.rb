@@ -31,7 +31,7 @@ RSpec.describe Cachorro, type: :model do
     c2.save
 
     expect(c2.save).to be_truthy
-    expect(Cachorro.where(nome: novo_nome).count > 0).to
+    expect(Cachorro.where(nome: novo_nome).count > 0).to be_truthy
   end
 
   it 'testa método destroy para apagar' do
