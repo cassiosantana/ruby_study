@@ -13,5 +13,10 @@ RSpec.describe CachorrosController, type: :request do
       get '/'
       expect(response).to render_template('index')
     end
+
+    it 'retorna código de status 200' do
+      get cachorros_path
+      expect(response.status).to eq(200)
+    end
   end
 end
