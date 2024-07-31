@@ -1,0 +1,27 @@
+<%= form_with(model: [@pedido, @item_pedido]) do |form| %>
+  <% if item_pedido.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(item_pedido.errors.count, "error") %> prohibited this item_pedido from being saved:</h2>
+
+      <ul>
+        <% item_pedido.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :carro_id, style: "display: block" %>
+    <%= form.select(:carro_id, Carro.all.map { |c| [c.nome, c.id] }) %>
+  </div>
+
+  <div>
+    <%= form.label :valor, style: "display: block" %>
+    <%= form.text_field :valor %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

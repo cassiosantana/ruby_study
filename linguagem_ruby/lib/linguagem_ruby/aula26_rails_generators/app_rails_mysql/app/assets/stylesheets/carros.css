@@ -1,0 +1,9 @@
+.show_carros {
+  border: 5px solid #000;
+  background: #ccc;
+  width: 50%;
+}
+
+.atributo {
+  border: 2px solid grey;
+}
